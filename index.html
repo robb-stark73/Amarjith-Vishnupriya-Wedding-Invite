@@ -3,174 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#5b2024">
+  <meta name="theme-color" content="#744033">
   <meta name="description" content="Wedding invitation for Amarjith PN and Vishnupriya Kumar. Join us in Guruvayur on February 3, 2027, and for our reception on February 4.">
-  <title>Amarjith &amp; Vishnupriya | Kerala Wedding Invitation</title>
+  <title>Amarjith &amp; Vishnupriya | Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
-      --maroon: #5b2024;
-      --red: #7d292c;
-      --leaf: #244b36;
-      --leaf-light: #56744d;
-      --gold: #c59b4f;
-      --kasavu: #f0dfad;
-      --ivory: #fffaf0;
-      --paper: #fffdf7;
-      --ink: #30271f;
-      --muted: #6d6255;
-      --line: #dfc98f;
-      --shadow: 0 18px 48px rgba(48, 28, 17, .15);
+      --terracotta: #8d4936;
+      --wood: #402923;
+      --leaf: #385b32;
+      --leaf-dark: #233d2c;
+      --gold: #a77a31;
+      --cream: #fff2dc;
+      --paper: #fffaf0;
+      --ink: #3d3027;
+      --muted: #68594c;
+      --line: #dfc89f;
+      --shadow: 0 16px 40px rgba(58, 38, 23, .14);
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
-    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
     a { color: inherit; }
     button, input, select, textarea { font: inherit; }
-    .container { width: min(1080px, calc(100% - 2rem)); margin-inline: auto; }
+    .container { width: min(1060px, calc(100% - 2rem)); margin-inline: auto; }
 
-    /* Kasavu-inspired double gold borders and deep temple-maroon invitation panel. */
+    /* Illustrated Kerala temple invitation: tiled nalukettu roof, thulasi-green landscape,
+       hanging jasmine and kanakambaram garlands, temple flagstaff, and the couple in kasavu. */
     .hero {
-      min-height: min(860px, 100svh); min-height: min(860px, 100vh);
-      display: grid; place-items: center; position: relative; overflow: hidden; text-align: center;
-      padding: clamp(2.5rem, 8vh, 6rem) 1rem;
-      background: radial-gradient(ellipse at 50% 32%, #8d3935 0%, #68272a 48%, #43191e 100%);
-      border-bottom: 8px double var(--gold);
-      isolation: isolate;
+      min-height: 780px;
+      min-height: max(780px, 100svh);
+      position: relative; isolation: isolate; overflow: hidden;
+      display: flex; justify-content: center; text-align: center;
+      padding: clamp(2.2rem, 8vh, 5rem) 1rem 0;
+      background: #e8c9a7;
+      border: 8px solid #6c7152;
+      border-bottom: 0;
     }
-    .hero::before, .hero::after { content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; width: clamp(24px, 7vw, 88px); opacity: .8; background: repeating-linear-gradient(180deg, transparent 0 17px, var(--gold) 18px 20px, transparent 21px 38px); }
-    .hero::before { left: 0; }.hero::after { right: 0; }
-    .hero-glow { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at center, transparent 10%, rgba(32,10,12,.32) 100%); }
-    .invitation { width: min(760px, calc(100% - 2rem)); padding: clamp(1.6rem, 6vw, 4rem); color: var(--ink); background: var(--ivory); border: 2px solid var(--gold); outline: 1px solid rgba(240,223,173,.7); outline-offset: 7px; box-shadow: var(--shadow); position: relative; }
-    .invitation::before, .invitation::after { content: '❋'; position: absolute; color: var(--gold); font-size: 1.2rem; top: 12px; }.invitation::before { left: 14px; }.invitation::after { right: 14px; }
-    .lamp { width: 66px; height: 82px; margin: 0 auto 1rem; color: var(--gold); }
-    .eyebrow { color: var(--leaf); font-size: .73rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+    .temple-scene { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; }
+    .hero-wash { position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg, rgba(255,244,225,.93) 0%, rgba(255,239,214,.84) 37%, rgba(255,239,214,.14) 59%, transparent 76%); pointer-events: none; }
+    .invitation { width: min(680px, 100%); align-self: flex-start; position: relative; z-index: 1; padding: .2rem 1rem 1rem; }
+    .eyebrow { color: #594334; font-size: .73rem; font-weight: 600; letter-spacing: .19em; text-transform: uppercase; }
+    .script-title { margin: .2rem 0 0; color: #493426; font: 500 clamp(3.2rem, 10vw, 6.4rem)/1.08 'Great Vibes', cursive; }
+    .small-of { color: #594334; font-family: 'Gelasio', Georgia, serif; font-size: .85rem; font-style: italic; }
     h1, h2, h3 { font-family: 'Gelasio', Georgia, serif; font-weight: 500; }
-    .names { margin: .8rem 0 .45rem; color: var(--maroon); font-size: clamp(2.9rem, 9.5vw, 6.4rem); line-height: .98; }
-    .names .amp { display: block; margin: .1em; color: var(--gold); font-style: italic; font-size: .52em; }
-    .hero-date { margin-top: 1.2rem; color: var(--maroon); font-size: .88rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .floral-rule { display: flex; align-items: center; gap: .75rem; width: min(240px, 75%); margin: 1.2rem auto; color: var(--gold); }
-    .floral-rule::before, .floral-rule::after { content: ''; height: 1px; flex: 1; background: var(--gold); }
-    .hero-copy { max-width: 520px; margin: auto; color: var(--muted); }
-    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
-    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: .7rem 1.25rem; border: 1px solid var(--maroon); border-radius: 2px; background: var(--maroon); color: white; text-decoration: none; font-weight: 700; transition: background .2s, transform .2s; }
-    .button:hover { background: #3e1519; transform: translateY(-1px); }.button.outline { background: transparent; color: var(--maroon); }
+    .names { margin: .2rem 0 .45rem; color: #38281f; font-size: clamp(1.7rem, 5vw, 3rem); line-height: 1.2; text-transform: uppercase; }
+    .hero-date { margin: .7rem 0 .2rem; color: #423328; font: 600 clamp(1rem, 3.2vw, 1.35rem) 'Gelasio', Georgia, serif; }
+    .hero-details { margin: .2rem 0; color: #493c31; font-family: 'Gelasio', Georgia, serif; font-size: clamp(.92rem, 2.8vw, 1.12rem); }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .65rem; margin-top: 1rem; }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; padding: .65rem 1.1rem; border: 1px solid #634032; border-radius: 2px; background: #704331; color: #fff8e9; text-decoration: none; font-weight: 700; }
+    .button:hover { background: #4b3027; }.button.outline { background: rgba(255,250,240,.72); color: #56382c; }
 
-    .site-nav { position: sticky; top: 0; z-index: 10; background: rgba(255,250,240,.97); border-bottom: 3px double var(--gold); box-shadow: 0 3px 12px rgba(50,35,20,.06); }
-    .nav-inner { display: flex; justify-content: center; gap: clamp(.85rem, 3vw, 2rem); overflow-x: auto; padding: .7rem .75rem; scrollbar-width: none; }.nav-inner::-webkit-scrollbar { display: none; }
-    .nav-inner a { flex: 0 0 auto; padding: .25rem .1rem; color: var(--maroon); font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
-    .section { padding: clamp(3.75rem, 8vw, 6rem) 0; }.section-heading { margin-bottom: 2rem; text-align: center; }
-    .section-heading h2 { margin: .35rem 0 .55rem; color: var(--maroon); font-size: clamp(2.25rem, 6vw, 3.6rem); line-height: 1.08; }
+    .site-nav { position: sticky; top: 0; z-index: 10; background: rgba(255,250,240,.97); border-block: 3px double var(--gold); box-shadow: 0 3px 12px rgba(50,35,20,.06); }
+    .nav-inner { display: flex; justify-content: center; gap: clamp(.85rem, 3vw, 2rem); overflow-x: auto; padding: .7rem .75rem; scrollbar-width: none; }
+    .nav-inner::-webkit-scrollbar { display: none; }
+    .nav-inner a { flex: 0 0 auto; padding: .25rem .1rem; color: #56382c; font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .section { padding: clamp(3.5rem, 7vw, 5.7rem) 0; }.section-heading { margin-bottom: 1.8rem; text-align: center; }
+    .section-heading h2 { margin: .35rem 0 .55rem; color: #684032; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; }
     .section-heading p { max-width: 630px; margin-inline: auto; color: var(--muted); }
 
-    .countdown-section { padding: clamp(3.4rem, 7vw, 5rem) 0; color: var(--ivory); text-align: center; background: var(--leaf); border-block: 6px double var(--gold); }
-    .countdown-section .eyebrow { color: var(--kasavu); }.countdown-section h2 { color: var(--ivory); }
+    .countdown-section { padding: clamp(3.3rem, 7vw, 5rem) 0; color: var(--paper); text-align: center; background: #38543b; border-block: 6px double #c19a55; }
+    .countdown-section .eyebrow { color: #f3dfb2; }.countdown-section h2 { color: var(--paper); }
     .timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; width: min(700px, 100%); margin-inline: auto; }
-    .time-box { padding: 1rem .5rem; border: 1px solid rgba(240,223,173,.65); background: rgba(255,255,255,.06); }
-    .time-box strong { display: block; font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 7vw, 3.7rem); font-weight: 500; line-height: 1.1; }.time-box span { color: var(--kasavu); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .time-box { padding: 1rem .5rem; border: 1px solid rgba(243,223,178,.65); background: rgba(255,255,255,.06); }
+    .time-box strong { display: block; font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 7vw, 3.7rem); font-weight: 500; line-height: 1.1; }
+    .time-box span { color: #f3dfb2; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
-    /* Pookalam: layered flower-petal rings are drawn locally with CSS, without external images. */
     .welcome { display: grid; grid-template-columns: .9fr 1.1fr; align-items: stretch; gap: 1.25rem; }
-    .pookalam-panel { min-height: 350px; display: grid; place-items: center; position: relative; overflow: hidden; background: linear-gradient(145deg, #173b2a, #315c3c); border: 5px double var(--gold); box-shadow: var(--shadow); }
-    .pookalam { width: min(230px, 62vw); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: repeating-conic-gradient(from 0deg, #d9a83f 0deg 9deg, #8e292c 9deg 18deg, #f4e3b6 18deg 27deg, #477443 27deg 36deg); box-shadow: 0 0 0 8px #f4e5bb, 0 0 0 12px #c7973d, 0 0 0 18px rgba(240,223,173,.25); }
-    .pookalam-inner { width: 62%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 5px dotted #f5e8c8; background: radial-gradient(circle, #f4d36d 0 15%, #c34a31 16% 35%, #f4e2ad 36% 52%, #8e292c 53% 100%); color: #fff2ce; font-size: clamp(2.2rem, 7vw, 3.6rem); text-shadow: 0 1px 5px #6b2925; }
-    .pookalam-caption { position: absolute; bottom: 1rem; color: var(--kasavu); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-    .welcome-copy, .event-card, .rsvp-copy, .rsvp-form { padding: clamp(1.35rem, 4vw, 2.2rem); background: var(--paper); border: 1px solid #e4d4ad; box-shadow: var(--shadow); }
-    .welcome-copy { border-top: 4px solid var(--gold); }.welcome-copy h2 { margin: 0 0 .9rem; color: var(--maroon); font-size: clamp(2rem, 4.5vw, 3rem); }.welcome-copy p { margin: 0 0 .9rem; color: var(--muted); }
+    .pookalam-panel { min-height: 310px; display: grid; place-items: center; position: relative; overflow: hidden; background: linear-gradient(145deg, #173b2a, #466540); border: 5px double #c19a55; box-shadow: var(--shadow); }
+    .pookalam { width: min(220px, 58vw); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: repeating-conic-gradient(#d5a548 0deg 9deg, #9b3930 9deg 18deg, #f3e5bd 18deg 27deg, #547746 27deg 36deg); box-shadow: 0 0 0 8px #f4e5bb, 0 0 0 12px #c7973d, 0 0 0 18px rgba(240,223,173,.25); }
+    .pookalam-inner { width: 62%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 5px dotted #f5e8c8; background: radial-gradient(circle, #f4d36d 0 15%, #c34a31 16% 35%, #f4e2ad 36% 52%, #8e292c 53% 100%); color: #fff2ce; font-size: 3rem; }
+    .welcome-copy, .event-card, .rsvp-copy, .rsvp-form { padding: clamp(1.3rem, 4vw, 2.1rem); background: #fffdf7; border: 1px solid #e4d4ad; box-shadow: var(--shadow); }
+    .welcome-copy { border-top: 4px solid #b98c48; }.welcome-copy h2 { margin: 0 0 .8rem; color: #684032; font-size: clamp(2rem, 4.5vw, 3rem); }.welcome-copy p { margin: 0 0 .9rem; color: var(--muted); }
 
-    .events-section { background: #f2e9d4; border-block: 1px solid var(--line); }
-    .events { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-    .event-card { border-top: 5px solid var(--gold); }.event-card h3 { margin: .45rem 0; color: var(--maroon); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
-    .event-date { margin: .5rem 0 .8rem; color: var(--maroon); font-weight: 700; }.event-card p { margin: .55rem 0; color: var(--muted); }
-    .map-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.1rem; }.map-link { min-height: 44px; display: inline-flex; align-items: center; padding: .6rem .9rem; border: 1px solid var(--leaf); color: var(--leaf); font-size: .88rem; font-weight: 700; text-decoration: none; }.map-link:hover { background: var(--leaf); color: white; }
-    .rsvp-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.2rem; align-items: start; }.rsvp-copy { background: #f2e9d4; border-top: 5px solid var(--leaf); }
-    .rsvp-copy h2 { margin: .4rem 0 .8rem; color: var(--maroon); font-size: clamp(2.1rem, 5vw, 3rem); }.rsvp-copy p { margin: .6rem 0; color: var(--muted); }
+    .events-section { background: #f2e9d8; border-block: 1px solid var(--line); }.events { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .event-card { border-top: 5px solid #b98c48; }.event-card h3 { margin: .45rem 0; color: #684032; font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
+    .event-date { margin: .5rem 0 .8rem; color: #684032; font-weight: 700; }.event-card p { margin: .55rem 0; color: var(--muted); }
+    .map-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.1rem; }.map-link { min-height: 44px; display: inline-flex; align-items: center; padding: .6rem .9rem; border: 1px solid #385b3d; color: #385b3d; font-size: .88rem; font-weight: 700; text-decoration: none; }.map-link:hover { background: #385b3d; color: white; }
+    .rsvp-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.2rem; align-items: start; }.rsvp-copy { background: #f2e9d8; border-top: 5px solid #385b3d; }
+    .rsvp-copy h2 { margin: .4rem 0 .8rem; color: #684032; font-size: clamp(2rem, 5vw, 2.8rem); }.rsvp-copy p { margin: .6rem 0; color: var(--muted); }
     .field { margin-bottom: 1rem; }.field label { display: block; margin-bottom: .35rem; color: var(--ink); font-weight: 700; }
     .field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: .72rem .8rem; border: 1px solid #d5c7aa; border-radius: 2px; background: #fffefa; color: var(--ink); }
-    .field textarea { min-height: 100px; resize: vertical; }.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid rgba(36,75,54,.2); border-color: var(--leaf); }
+    .field textarea { min-height: 100px; resize: vertical; }.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid rgba(56,91,50,.2); border-color: #385b32; }
     .rsvp-form .button { width: 100%; cursor: pointer; }.form-note { margin: .8rem 0 0; color: var(--muted); font-size: .82rem; }
     .confirmation { display: none; margin-top: 1rem; padding: 1rem; background: #edf2e8; border: 1px solid #cbd9c3; white-space: pre-line; overflow-wrap: anywhere; }
-    footer { padding: 2.2rem 1rem calc(2.2rem + env(safe-area-inset-bottom)); text-align: center; color: #fff9eb; background: var(--maroon); border-top: 7px double var(--gold); }
-    .footer-names { font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); }footer p { margin: .3rem 0; color: var(--kasavu); font-size: .9rem; }
+    footer { padding: 2.1rem 1rem calc(2.1rem + env(safe-area-inset-bottom)); text-align: center; color: #fff9eb; background: #603a30; border-top: 7px double #c19a55; }
+    .footer-names { font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); }footer p { margin: .3rem 0; color: #f3dfb2; font-size: .9rem; }
 
     @media (max-width: 700px) {
       .container { width: min(100% - 1.25rem, 560px); }
-      .hero { min-height: 92vh; min-height: 92svh; padding: 2rem .75rem; }
-      .invitation { width: calc(100% - 1.1rem); padding: 1.8rem .95rem; outline-offset: 4px; }
-      .names { font-size: clamp(2.65rem, 12vw, 4.3rem); }.hero-date { font-size: .75rem; letter-spacing: .07em; }.hero-copy { font-size: .95rem; }
-      .nav-inner { justify-content: flex-start; gap: 1.15rem; padding-inline: .8rem; }.nav-inner a { font-size: .69rem; }
-      .section { padding-block: 3.2rem; }.section-heading { margin-bottom: 1.45rem; }
+      .hero { min-height: 740px; min-height: max(740px, 100svh); border-width: 5px; padding: 2rem .55rem 0; }
+      .hero-wash { background: linear-gradient(180deg, rgba(255,244,225,.96) 0%, rgba(255,239,214,.9) 38%, rgba(255,239,214,.18) 58%, transparent 76%); }
+      .invitation { width: 100%; padding: .15rem .25rem 1rem; }
+      .script-title { font-size: clamp(3.1rem, 15vw, 5rem); }
+      .names { font-size: clamp(1.55rem, 7vw, 2.45rem); }.hero-date { font-size: .9rem; letter-spacing: .01em; }
+      .hero-details { font-size: .94rem; }.hero-actions { gap: .5rem; }.hero-actions .button { padding-inline: .8rem; font-size: .87rem; }
+      .nav-inner { justify-content: flex-start; gap: 1.1rem; padding-inline: .7rem; }.nav-inner a { font-size: .68rem; }
+      .section { padding-block: 3.15rem; }.section-heading { margin-bottom: 1.4rem; }
       .timer { gap: .4rem; }.time-box { padding: .8rem .2rem; }.time-box span { font-size: .6rem; letter-spacing: .07em; }
-      .welcome, .events, .rsvp-layout { grid-template-columns: 1fr; }.pookalam-panel { min-height: 245px; }
+      .welcome, .events, .rsvp-layout { grid-template-columns: 1fr; }.pookalam-panel { min-height: 240px; }
       .event-card, .welcome-copy, .rsvp-copy, .rsvp-form { padding: 1.2rem; }
       .map-links { display: grid; grid-template-columns: 1fr; }.map-link { justify-content: center; }
-      .actions { display: grid; grid-template-columns: 1fr; }.button { width: 100%; }
     }
-    @media (max-width: 360px) { .container { width: calc(100% - 1rem); }.timer { gap: .25rem; }.time-box { padding-inline: .1rem; }.time-box strong { font-size: 1.75rem; }.time-box span { font-size: .54rem; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+    @media (max-width: 360px) { .container { width: calc(100% - 1rem); }.timer { gap: .25rem; }.time-box { padding-inline: .1rem; }.time-box strong { font-size: 1.75rem; }.time-box span { font-size: .54rem; }.hero-actions { display: grid; grid-template-columns: 1fr; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
 </head>
 <body>
   <header class="hero" id="home">
-    <div class="hero-glow" aria-hidden="true"></div>
+    <svg class="temple-scene" viewBox="0 0 420 850" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of a traditional Kerala temple wedding with tiled roofs, flower garlands, coconut leaves, a temple flagstaff, and a couple in kasavu attire" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f8d8ae"/><stop offset=".58" stop-color="#e8d5b9"/><stop offset="1" stop-color="#b5c398"/></linearGradient>
+        <linearGradient id="grass" x2="0" y2="1"><stop stop-color="#72914a"/><stop offset="1" stop-color="#29482d"/></linearGradient>
+        <pattern id="tiles" width="13" height="8" patternUnits="userSpaceOnUse"><rect width="13" height="8" fill="#9f4d37"/><path d="M0 7.5h13M6.5 0v7" stroke="#542f2a" stroke-width="1"/></pattern>
+        <pattern id="wood" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#66382d"/><path d="M0 3h10M0 8h10" stroke="#412b28" stroke-width="1.2"/></pattern>
+      </defs>
+      <rect width="420" height="850" fill="url(#sky)"/>
+      <!-- steep, exposed timber roof trusses framing the invitation -->
+      <path d="M0 0h420v105L210 31 0 105Z" fill="url(#wood)" stroke="#342722" stroke-width="5"/>
+      <path d="M-10 112 210 28 430 112M-5 94 210 13 425 94M15 76 210 4 405 76" fill="none" stroke="#211f1b" stroke-width="5"/>
+      <path d="M0 104 210 29 420 104M25 92 210 27 395 92M55 79 210 25 365 79M90 66 210 23 330 66" fill="none" stroke="#d5b887" stroke-width="2"/>
+      <!-- hanging jasmine and pink flower thoranam -->
+      <g fill="none" stroke="#f1e8c9" stroke-width="3">
+        <path d="M24 0v189M35 0v152M385 0v158M397 0v191"/>
+      </g>
+      <g fill="#d75d85" stroke="#a9325a" stroke-width="1">
+        <path d="M18 146h13l-6 10ZM29 155h13l-7 11ZM17 166h13l-6 10ZM376 126h14l-7 11ZM389 139h14l-7 11ZM375 152h14l-7 11ZM383 170h14l-7 11"/>
+      </g>
+      <g fill="#fff4df"><circle cx="23" cy="132" r="3"/><circle cx="33" cy="143" r="3"/><circle cx="391" cy="119" r="3"/><circle cx="380" cy="137" r="3"/></g>
+      <!-- coconut palm leaves entering the scene -->
+      <g fill="#4d762d" stroke="#385329" stroke-width="2">
+        <path d="M0 28C45 42 74 77 103 131 67 104 35 81 0 72ZM0 45C42 58 66 90 91 146 55 111 27 99 0 96ZM420 407c-50-3-93 17-143 55 50-16 91-21 143-20ZM420 430c-46 6-84 31-123 76 46-24 82-35 123-40Z"/>
+        <path d="M3 43 90 129M417 425 280 462" fill="none" stroke="#a2ad55" stroke-width="3"/>
+      </g>
+      <!-- green temple grounds -->
+      <path d="M0 541Q100 504 210 533t210 3v314H0Z" fill="url(#grass)"/>
+      <path d="M0 590q74-35 142-4t135-3q76-32 143-2v18H0Z" fill="#8fa45a" opacity=".8"/>
+      <!-- side nalukettu roofs -->
+      <g stroke="#362621" stroke-width="5">
+        <path d="M-20 520 69 459 160 520Z" fill="url(#tiles)"/><path d="M-20 520h180v91H-20Z" fill="#d4c39f"/>
+        <path d="M260 520 350 459 440 520Z" fill="url(#tiles)"/><path d="M260 520h180v91H260Z" fill="#d4c39f"/>
+      </g>
+      <g stroke="#694637" stroke-width="5"><path d="M8 535v64m27-64v64m27-64v64m27-64v64m27-64v64m27-64v64M285 535v64m27-64v64m27-64v64m27-64v64m27-64v64m27-64v64"/></g>
+      <!-- central temple and layered copper-red tiled roofs -->
+      <path d="M113 492 210 420 307 492Z" fill="url(#tiles)" stroke="#382721" stroke-width="6"/>
+      <path d="M92 508 210 438 328 508Z" fill="#b8603d" stroke="#3b2923" stroke-width="6"/>
+      <path d="M104 505h212v118H104Z" fill="#d3c09a" stroke="#49372b" stroke-width="6"/>
+      <path d="M123 523h174v99H123Z" fill="#78513b"/>
+      <g stroke="#e0c895" stroke-width="5"><path d="M137 529v92m29-92v92m29-92v92m29-92v92m29-92v92m29-92v92"/></g>
+      <path d="M178 621v-58q32-45 64 0v58Z" fill="#392922" stroke="#c69b50" stroke-width="4"/>
+      <path d="M210 411v-99m-12 99h24m-20-18h16m-13-18h10m-7-18h4m-13 54h26" fill="none" stroke="#b58a36" stroke-width="5"/>
+      <path d="M210 309q-17 13 0 24 17-11 0-24Z" fill="#d8ad4c" stroke="#946d2d" stroke-width="2"/>
+      <path d="M180 406h60M188 393h44M195 380h30" stroke="#d4a948" stroke-width="4"/>
+      <!-- foreground couple, seen from behind: kasavu mundu and sari -->
+      <g>
+        <!-- groom -->
+        <circle cx="139" cy="682" r="22" fill="#29232b"/><path d="M118 680q20-25 43 0l-4 17h-36Z" fill="#201d24"/>
+        <path d="M108 714q30-21 61 0l16 136h-93Z" fill="#fff9e9" stroke="#c7b98f" stroke-width="3"/>
+        <path d="M93 823h92v14H93Z" fill="#d6b65d"/><path d="M112 714q-16 7-25 31l-24 80 13 6 39-66" fill="#fff8e8" stroke="#c7b98f" stroke-width="3"/>
+        <path d="M112 711q28 15 56 0l-8 12q-23 13-40 1Z" fill="#32834c"/>
+        <!-- bride -->
+        <circle cx="250" cy="680" r="21" fill="#28202a"/><path d="M229 680q19-25 42 0l-3 19h-37Z" fill="#201d24"/>
+        <path d="M230 700q20-15 41 0l29 150h-103Z" fill="#fff8e7" stroke="#d2bd84" stroke-width="3"/>
+        <path d="M220 715q32 20 57 0l5 13q-27 21-60 0Z" fill="#d3a941"/>
+        <path d="M274 708 309 752 287 850h-26l22-89-36-35Z" fill="#f2e2bd" stroke="#c7a957" stroke-width="3"/>
+        <path d="M224 730q25 12 48 0M217 749q30 14 57 0M211 771q34 14 68 0M206 796q37 14 77 0" fill="none" stroke="#c79b42" stroke-width="3"/>
+        <circle cx="250" cy="665" r="4" fill="#d2a23d"/><path d="M233 675q17 8 34 0" fill="none" stroke="#d6ad4f" stroke-width="3"/>
+      </g>
+      <g fill="#31552e"><path d="M0 836q38-27 75 0v14H0Zm340 0q40-32 80 0v14h-80Z"/></g>
+    </svg>
+    <div class="hero-wash" aria-hidden="true"></div>
     <div class="invitation">
-      <svg class="lamp" viewBox="0 0 80 100" role="img" aria-label="Traditional Kerala nilavilakku lamp" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M40 6c-7 9 2 11 0 18-6-4-10-1-8 5 1 4 5 6 8 7 4-2 8-5 8-9 0-5-5-7-8-4 3-7 4-12 0-17Z" fill="#d5a242" stroke="#9b6e2d"/>
-          <path d="M40 36v49M30 43h20M34 52h12M31 61h18M27 72h26M22 84h36M18 90h44"/>
-          <path d="M22 85c0-9 8-13 18-13s18 4 18 13M28 66c0-7 5-11 12-11s12 4 12 11"/>
-          <path d="M17 89c6 4 13 6 23 6s17-2 23-6"/>
-        </g>
-      </svg>
-      <div class="eyebrow">With the blessings of our families</div>
-      <h1 class="names">Amarjith PN <span class="amp">and</span> Vishnupriya Kumar</h1>
-      <div class="hero-date">Wednesday · 3 February 2027 · Guruvayur</div>
-      <div class="floral-rule" aria-hidden="true">❋</div>
-      <p class="hero-copy">Together with our families, we warmly invite you to celebrate our wedding and the beginning of our life together.</p>
-      <div class="actions"><a class="button" href="#celebrations">Wedding details</a><a class="button outline" href="#rsvp">Kindly RSVP</a></div>
+      <div class="eyebrow">Join us for the</div>
+      <div class="script-title">Wedding</div>
+      <div class="eyebrow">of</div>
+      <h1 class="names">Amarjith PN <span class="small-of">and</span> Vishnupriya Kumar</h1>
+      <div class="hero-date">Wednesday, 3rd February 2027</div>
+      <p class="hero-details">Guruvayur Temple · 9:00 AM–2:00 PM</p>
+      <p class="hero-details">Kurumboor Mana, Guruvayur</p>
+      <div class="hero-actions"><a class="button" href="#celebrations">View celebration details</a><a class="button outline" href="#rsvp">RSVP</a></div>
     </div>
   </header>
 
-  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner container"><a href="#home">Welcome</a><a href="#countdown">Countdown</a><a href="#welcome">A celebration</a><a href="#celebrations">Events</a><a href="#rsvp">RSVP</a></div></nav>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner container"><a href="#home">Invitation</a><a href="#countdown">Countdown</a><a href="#welcome">Welcome</a><a href="#celebrations">Events</a><a href="#rsvp">RSVP</a></div></nav>
 
   <main>
     <section class="countdown-section" id="countdown">
-      <div class="container">
-        <div class="section-heading"><div class="eyebrow">The auspicious day approaches</div><h2>Counting down to our wedding</h2><p>3 February 2027 · 9:00 AM Indian Standard Time</p></div>
+      <div class="container"><div class="section-heading"><div class="eyebrow">The auspicious day approaches</div><h2>Counting down to our wedding</h2><p>3 February 2027 · 9:00 AM Indian Standard Time</p></div>
         <div class="timer" aria-label="Countdown to the wedding" aria-live="polite"><div class="time-box"><strong id="days">—</strong><span>Days</span></div><div class="time-box"><strong id="hours">—</strong><span>Hours</span></div><div class="time-box"><strong id="minutes">—</strong><span>Minutes</span></div><div class="time-box"><strong id="seconds">—</strong><span>Seconds</span></div></div>
       </div>
     </section>
 
-    <section class="section" id="welcome">
-      <div class="container">
-        <div class="section-heading"><div class="eyebrow">A Kerala celebration</div><h2>With joy in our hearts</h2></div>
-        <div class="welcome">
-          <div class="pookalam-panel" role="img" aria-label="Colorful Onam-style pookalam flower design"><div class="pookalam"><div class="pookalam-inner">✿</div></div><div class="pookalam-caption">A flower of welcome</div></div>
-          <div class="welcome-copy"><h2>Namaskaram</h2><p>As we begin this beautiful new chapter, we would be honoured to have you with us. Your presence and blessings will make our wedding celebrations truly special.</p><p>We look forward to celebrating with you in Guruvayur, surrounded by the warmth of family, friends, and cherished traditions.</p><p><strong>സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</strong><br>With love, Amarjith &amp; Vishnupriya</p></div>
-        </div>
+    <section class="section" id="welcome"><div class="container"><div class="section-heading"><div class="eyebrow">A Kerala celebration</div><h2>With joy in our hearts</h2></div>
+      <div class="welcome"><div class="pookalam-panel" role="img" aria-label="Colorful pookalam flower design"><div class="pookalam"><div class="pookalam-inner">✿</div></div></div>
+        <div class="welcome-copy"><h2>Namaskaram</h2><p>As we begin this beautiful new chapter, we would be honoured to have you with us. Your presence and blessings will make our wedding celebrations truly special.</p><p>We look forward to celebrating with you in Guruvayur, surrounded by the warmth of family, friends, and cherished traditions.</p><p><strong>സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</strong><br>With love, Amarjith &amp; Vishnupriya</p></div>
       </div>
-    </section>
+    </div></section>
 
-    <section class="section events-section" id="celebrations">
-      <div class="container">
-        <div class="section-heading"><div class="eyebrow">Please join us</div><h2>Celebration details</h2><p>We look forward to sharing these auspicious moments with you.</p></div>
-        <div class="events">
-          <article class="event-card"><div class="eyebrow">The wedding</div><h3>A sacred beginning</h3><div class="event-date">Wednesday, 3 February 2027<br>9:00 AM–2:00 PM</div><p><strong>Ceremony:</strong> Guruvayur Temple</p><p><strong>Wedding venue:</strong> Kurumboor Mana, Guruvayur</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Guruvayur+Temple%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Temple map ↗</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Wedding venue map ↗</a></div></article>
-          <article class="event-card"><div class="eyebrow">The reception</div><h3>An evening of celebration</h3><div class="event-date">Thursday, 4 February 2027<br>4:00 PM–8:00 PM</div><p>Join us for an evening of warm wishes, good company, and joyful memories.</p><p><strong>Venue:</strong> Cloud 7, Thadukkassery</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cloud+7%2C+Thadukkassery" target="_blank" rel="noopener noreferrer">Reception map ↗</a></div></article>
-        </div>
+    <section class="section events-section" id="celebrations"><div class="container"><div class="section-heading"><div class="eyebrow">Please join us</div><h2>Celebration details</h2><p>We look forward to sharing these auspicious moments with you.</p></div>
+      <div class="events">
+        <article class="event-card"><div class="eyebrow">The wedding</div><h3>A sacred beginning</h3><div class="event-date">Wednesday, 3 February 2027<br>9:00 AM–2:00 PM</div><p><strong>Ceremony:</strong> Guruvayur Temple</p><p><strong>Wedding venue:</strong> Kurumboor Mana, Guruvayur</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Guruvayur+Temple%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Temple map ↗</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Wedding venue map ↗</a></div></article>
+        <article class="event-card"><div class="eyebrow">The reception</div><h3>An evening of celebration</h3><div class="event-date">Thursday, 4 February 2027<br>4:00 PM–8:00 PM</div><p>Join us for an evening of warm wishes, good company, and joyful memories.</p><p><strong>Venue:</strong> Cloud 7, Thadukkassery</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cloud+7%2C+Thadukkassery" target="_blank" rel="noopener noreferrer">Reception map ↗</a></div></article>
       </div>
-    </section>
+    </div></section>
 
-    <section class="section" id="rsvp">
-      <div class="container"><div class="section-heading"><div class="eyebrow">Kindly reply</div><h2>Will you join us?</h2></div>
-        <div class="rsvp-layout">
-          <div class="rsvp-copy"><h2>Your blessings mean so much</h2><p>Please let us know if you can join the wedding celebrations.</p><p><strong>Wedding:</strong> 3 February 2027, 9:00 AM–2:00 PM<br><strong>Reception:</strong> 4 February 2027, 4:00 PM–8:00 PM</p></div>
-          <form class="rsvp-form" id="rsvp-form"><div class="field"><label for="guest-name">Your name</label><input id="guest-name" name="name" autocomplete="name" required placeholder="Enter your name"></div><div class="field"><label for="attendance">Will you be joining us?</label><select id="attendance" name="attendance" required><option value="" disabled selected>Please choose</option><option value="Joyfully accepts">Joyfully accepts</option><option value="Regretfully declines">Regretfully declines</option></select></div><div class="field"><label for="guests">Number of guests (including you)</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div><div class="field"><label for="message">A note for the couple (optional)</label><textarea id="message" name="message" placeholder="Write a message"></textarea></div><button class="button" type="submit">Prepare my RSVP</button><p class="form-note">This RSVP form prepares a message for you to copy and share. It does not submit responses automatically.</p><div class="confirmation" id="confirmation" role="status" aria-live="polite"></div></form>
-        </div>
+    <section class="section" id="rsvp"><div class="container"><div class="section-heading"><div class="eyebrow">Kindly reply</div><h2>Will you join us?</h2></div>
+      <div class="rsvp-layout">
+        <div class="rsvp-copy"><h2>Your blessings mean so much</h2><p>Please let us know if you can join the wedding celebrations.</p><p><strong>Wedding:</strong> 3 February 2027, 9:00 AM–2:00 PM<br><strong>Reception:</strong> 4 February 2027, 4:00 PM–8:00 PM</p></div>
+        <form class="rsvp-form" id="rsvp-form"><div class="field"><label for="guest-name">Your name</label><input id="guest-name" name="name" autocomplete="name" required placeholder="Enter your name"></div><div class="field"><label for="attendance">Will you be joining us?</label><select id="attendance" name="attendance" required><option value="" disabled selected>Please choose</option><option value="Joyfully accepts">Joyfully accepts</option><option value="Regretfully declines">Regretfully declines</option></select></div><div class="field"><label for="guests">Number of guests (including you)</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div><div class="field"><label for="message">A note for the couple (optional)</label><textarea id="message" name="message" placeholder="Write a message"></textarea></div><button class="button" type="submit">Prepare my RSVP</button><p class="form-note">This RSVP form prepares a message for you to copy and share. It does not submit responses automatically.</p><div class="confirmation" id="confirmation" role="status" aria-live="polite"></div></form>
       </div>
-    </section>
+    </div></section>
   </main>
 
   <footer><div class="footer-names">Amarjith &amp; Vishnupriya</div><p>3–4 February 2027 · Guruvayur</p><p>സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</p></footer>
