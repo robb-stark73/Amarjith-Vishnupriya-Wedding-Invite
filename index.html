@@ -3,202 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#6c2528">
+  <meta name="theme-color" content="#5b2024">
   <meta name="description" content="Wedding invitation for Amarjith PN and Vishnupriya Kumar. Join us in Guruvayur on February 3, 2027, and for our reception on February 4.">
-  <title>Amarjith &amp; Vishnupriya | Wedding Invitation</title>
+  <title>Amarjith &amp; Vishnupriya | Kerala Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light;
-      --maroon: #702a2c;
-      --maroon-dark: #4e1d20;
-      --gold: #b99451;
-      --gold-light: #e6d5aa;
-      --leaf: #405b3d;
+      --maroon: #5b2024;
+      --red: #7d292c;
+      --leaf: #244b36;
+      --leaf-light: #56744d;
+      --gold: #c59b4f;
+      --kasavu: #f0dfad;
+      --ivory: #fffaf0;
+      --paper: #fffdf7;
       --ink: #30271f;
-      --muted: #71665a;
-      --cream: #fbf7ed;
-      --paper: #fffdf8;
-      --line: #e8dcc3;
-      --shadow: 0 16px 40px rgba(65, 42, 23, .10);
+      --muted: #6d6255;
+      --line: #dfc98f;
+      --shadow: 0 18px 48px rgba(48, 28, 17, .15);
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-    body { margin: 0; color: var(--ink); background: var(--cream); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+    body { margin: 0; color: var(--ink); background: var(--ivory); font-family: 'DM Sans', sans-serif; line-height: 1.65; }
     a { color: inherit; }
     button, input, select, textarea { font: inherit; }
-    .container { width: min(1060px, calc(100% - 2.5rem)); margin-inline: auto; }
+    .container { width: min(1080px, calc(100% - 2rem)); margin-inline: auto; }
 
+    /* Kasavu-inspired double gold borders and deep temple-maroon invitation panel. */
     .hero {
-      min-height: min(850px, 100svh);
+      min-height: min(860px, 100svh); min-height: min(860px, 100vh);
       display: grid; place-items: center; position: relative; overflow: hidden; text-align: center;
       padding: clamp(2.5rem, 8vh, 6rem) 1rem;
-      background: radial-gradient(ellipse at center, rgba(255,253,248,.96) 0%, rgba(251,247,237,.94) 46%, rgba(238,226,199,.88) 100%);
-      border-bottom: 5px double var(--gold);
+      background: radial-gradient(ellipse at 50% 32%, #8d3935 0%, #68272a 48%, #43191e 100%);
+      border-bottom: 8px double var(--gold);
+      isolation: isolate;
     }
-    .hero::before, .hero::after { content: ''; position: absolute; width: min(34vw, 360px); aspect-ratio: 1; border: 1px solid rgba(185,148,81,.26); border-radius: 50%; pointer-events: none; }
-    .hero::before { left: -13vw; top: -13vw; box-shadow: 0 0 0 18px rgba(185,148,81,.045), 0 0 0 36px rgba(185,148,81,.04); }
-    .hero::after { right: -13vw; bottom: -13vw; box-shadow: 0 0 0 18px rgba(185,148,81,.045), 0 0 0 36px rgba(185,148,81,.04); }
-    .hero-card { position: relative; z-index: 1; width: min(760px, 100%); padding: clamp(2rem, 7vw, 4.5rem) clamp(1.15rem, 5vw, 3.5rem); background: rgba(255,253,248,.73); border: 1px solid var(--gold); outline: 1px solid rgba(185,148,81,.35); outline-offset: 7px; box-shadow: var(--shadow); }
-    .lamp-mark { display: inline-grid; place-items: center; width: 52px; height: 52px; margin-bottom: 1rem; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-size: 1.5rem; }
-    .eyebrow { color: var(--leaf); font-size: .73rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; }
+    .hero::before, .hero::after { content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; width: clamp(24px, 7vw, 88px); opacity: .8; background: repeating-linear-gradient(180deg, transparent 0 17px, var(--gold) 18px 20px, transparent 21px 38px); }
+    .hero::before { left: 0; }.hero::after { right: 0; }
+    .hero-glow { position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse at center, transparent 10%, rgba(32,10,12,.32) 100%); }
+    .invitation { width: min(760px, calc(100% - 2rem)); padding: clamp(1.6rem, 6vw, 4rem); color: var(--ink); background: var(--ivory); border: 2px solid var(--gold); outline: 1px solid rgba(240,223,173,.7); outline-offset: 7px; box-shadow: var(--shadow); position: relative; }
+    .invitation::before, .invitation::after { content: '❋'; position: absolute; color: var(--gold); font-size: 1.2rem; top: 12px; }.invitation::before { left: 14px; }.invitation::after { right: 14px; }
+    .lamp { width: 66px; height: 82px; margin: 0 auto 1rem; color: var(--gold); }
+    .eyebrow { color: var(--leaf); font-size: .73rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
     h1, h2, h3 { font-family: 'Gelasio', Georgia, serif; font-weight: 500; }
-    .names { margin: .9rem 0 .45rem; color: var(--maroon); font-size: clamp(3rem, 9.5vw, 6.7rem); line-height: .98; }
-    .names .amp { display: block; margin: .14em; color: var(--gold); font-style: italic; font-size: .54em; }
-    .hero-date { margin-top: 1.25rem; color: var(--maroon); font-size: .9rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-    .divider { display: flex; align-items: center; gap: .8rem; width: min(250px, 75%); margin: 1.4rem auto; color: var(--gold); }
-    .divider::before, .divider::after { content: ''; height: 1px; flex: 1; background: var(--gold); }
-    .hero-copy { max-width: 520px; margin: 0 auto; color: var(--muted); }
-    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
-    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: .72rem 1.3rem; border: 1px solid var(--maroon); border-radius: 3px; background: var(--maroon); color: white; text-decoration: none; font-weight: 700; transition: background .2s, transform .2s; }
-    .button:hover { background: var(--maroon-dark); transform: translateY(-1px); }
-    .button.outline { background: transparent; color: var(--maroon); }
-    .button.outline:hover { background: rgba(112,42,44,.07); }
+    .names { margin: .8rem 0 .45rem; color: var(--maroon); font-size: clamp(2.9rem, 9.5vw, 6.4rem); line-height: .98; }
+    .names .amp { display: block; margin: .1em; color: var(--gold); font-style: italic; font-size: .52em; }
+    .hero-date { margin-top: 1.2rem; color: var(--maroon); font-size: .88rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .floral-rule { display: flex; align-items: center; gap: .75rem; width: min(240px, 75%); margin: 1.2rem auto; color: var(--gold); }
+    .floral-rule::before, .floral-rule::after { content: ''; height: 1px; flex: 1; background: var(--gold); }
+    .hero-copy { max-width: 520px; margin: auto; color: var(--muted); }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+    .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; padding: .7rem 1.25rem; border: 1px solid var(--maroon); border-radius: 2px; background: var(--maroon); color: white; text-decoration: none; font-weight: 700; transition: background .2s, transform .2s; }
+    .button:hover { background: #3e1519; transform: translateY(-1px); }.button.outline { background: transparent; color: var(--maroon); }
 
-    .site-nav { position: sticky; top: 0; z-index: 10; background: rgba(251,247,237,.96); border-bottom: 1px solid var(--line); box-shadow: 0 3px 12px rgba(50,35,20,.04); }
-    .nav-inner { display: flex; justify-content: center; gap: clamp(.85rem, 3vw, 2rem); overflow-x: auto; padding: .7rem .75rem; scrollbar-width: none; }
-    .nav-inner::-webkit-scrollbar { display: none; }
-    .nav-inner a { flex: 0 0 auto; padding: .25rem .1rem; color: var(--maroon); font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
-    .nav-inner a:hover { color: var(--gold); }
+    .site-nav { position: sticky; top: 0; z-index: 10; background: rgba(255,250,240,.97); border-bottom: 3px double var(--gold); box-shadow: 0 3px 12px rgba(50,35,20,.06); }
+    .nav-inner { display: flex; justify-content: center; gap: clamp(.85rem, 3vw, 2rem); overflow-x: auto; padding: .7rem .75rem; scrollbar-width: none; }.nav-inner::-webkit-scrollbar { display: none; }
+    .nav-inner a { flex: 0 0 auto; padding: .25rem .1rem; color: var(--maroon); font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .section { padding: clamp(3.75rem, 8vw, 6rem) 0; }.section-heading { margin-bottom: 2rem; text-align: center; }
+    .section-heading h2 { margin: .35rem 0 .55rem; color: var(--maroon); font-size: clamp(2.25rem, 6vw, 3.6rem); line-height: 1.08; }
+    .section-heading p { max-width: 630px; margin-inline: auto; color: var(--muted); }
 
-    .section { padding: clamp(3.75rem, 8vw, 6.5rem) 0; }
-    .section-heading { margin-bottom: 2rem; text-align: center; }
-    .section-heading h2 { margin: .35rem 0 .6rem; color: var(--maroon); font-size: clamp(2.25rem, 6vw, 3.6rem); line-height: 1.08; }
-    .section-heading p { max-width: 620px; margin-inline: auto; color: var(--muted); }
-    .countdown-section { padding: clamp(3.6rem, 7vw, 5.2rem) 0; color: var(--paper); text-align: center; background: var(--leaf); border-block: 5px double var(--gold); }
-    .countdown-section .eyebrow { color: var(--gold-light); }
-    .countdown-section h2 { color: var(--paper); }
-    .countdown-section .section-heading { margin-bottom: 1.4rem; }
-    .timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; width: min(720px, 100%); margin-inline: auto; }
-    .time-box { padding: 1rem .5rem; border: 1px solid rgba(230,213,170,.45); background: rgba(255,255,255,.055); }
-    .time-box strong { display: block; font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 7vw, 3.8rem); font-weight: 500; line-height: 1.1; }
-    .time-box span { color: var(--gold-light); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .countdown-section { padding: clamp(3.4rem, 7vw, 5rem) 0; color: var(--ivory); text-align: center; background: var(--leaf); border-block: 6px double var(--gold); }
+    .countdown-section .eyebrow { color: var(--kasavu); }.countdown-section h2 { color: var(--ivory); }
+    .timer { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; width: min(700px, 100%); margin-inline: auto; }
+    .time-box { padding: 1rem .5rem; border: 1px solid rgba(240,223,173,.65); background: rgba(255,255,255,.06); }
+    .time-box strong { display: block; font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 7vw, 3.7rem); font-weight: 500; line-height: 1.1; }.time-box span { color: var(--kasavu); font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
-    .welcome { display: grid; grid-template-columns: .85fr 1.15fr; align-items: stretch; gap: 1.25rem; }
-    .welcome-art { min-height: 350px; position: relative; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, #6a2427, #8b3c32 55%, #4c633f); border: 1px solid var(--gold); box-shadow: var(--shadow); }
-    .welcome-art::before { content: '❋'; display: grid; place-items: center; width: 190px; aspect-ratio: 1; border: 1px solid rgba(238,214,158,.68); border-radius: 50%; color: var(--gold-light); font-size: 6rem; text-shadow: 0 2px 18px rgba(0,0,0,.2); }
-    .welcome-art::after { content: 'ശുഭമംഗളം'; position: absolute; bottom: 1.5rem; color: #f1dfb8; font-size: 1.2rem; letter-spacing: .08em; }
-    .welcome-copy, .event-card, .rsvp-copy, .rsvp-form { padding: clamp(1.35rem, 4vw, 2.2rem); background: var(--paper); border: 1px solid var(--line); box-shadow: var(--shadow); }
-    .welcome-copy h2 { margin: 0 0 .9rem; color: var(--maroon); font-size: clamp(2rem, 4.5vw, 3rem); }
-    .welcome-copy p { margin: 0 0 .9rem; color: var(--muted); }
+    /* Pookalam: layered flower-petal rings are drawn locally with CSS, without external images. */
+    .welcome { display: grid; grid-template-columns: .9fr 1.1fr; align-items: stretch; gap: 1.25rem; }
+    .pookalam-panel { min-height: 350px; display: grid; place-items: center; position: relative; overflow: hidden; background: linear-gradient(145deg, #173b2a, #315c3c); border: 5px double var(--gold); box-shadow: var(--shadow); }
+    .pookalam { width: min(230px, 62vw); aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; background: repeating-conic-gradient(from 0deg, #d9a83f 0deg 9deg, #8e292c 9deg 18deg, #f4e3b6 18deg 27deg, #477443 27deg 36deg); box-shadow: 0 0 0 8px #f4e5bb, 0 0 0 12px #c7973d, 0 0 0 18px rgba(240,223,173,.25); }
+    .pookalam-inner { width: 62%; aspect-ratio: 1; display: grid; place-items: center; border-radius: 50%; border: 5px dotted #f5e8c8; background: radial-gradient(circle, #f4d36d 0 15%, #c34a31 16% 35%, #f4e2ad 36% 52%, #8e292c 53% 100%); color: #fff2ce; font-size: clamp(2.2rem, 7vw, 3.6rem); text-shadow: 0 1px 5px #6b2925; }
+    .pookalam-caption { position: absolute; bottom: 1rem; color: var(--kasavu); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .welcome-copy, .event-card, .rsvp-copy, .rsvp-form { padding: clamp(1.35rem, 4vw, 2.2rem); background: var(--paper); border: 1px solid #e4d4ad; box-shadow: var(--shadow); }
+    .welcome-copy { border-top: 4px solid var(--gold); }.welcome-copy h2 { margin: 0 0 .9rem; color: var(--maroon); font-size: clamp(2rem, 4.5vw, 3rem); }.welcome-copy p { margin: 0 0 .9rem; color: var(--muted); }
 
-    .events-section { background: #f4eddd; border-block: 1px solid var(--line); }
+    .events-section { background: #f2e9d4; border-block: 1px solid var(--line); }
     .events { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-    .event-card { border-top: 4px solid var(--gold); }
-    .event-card .eyebrow { color: var(--leaf); }
-    .event-card h3 { margin: .45rem 0; color: var(--maroon); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
-    .event-date { margin: .5rem 0 .8rem; color: var(--maroon); font-weight: 700; }
-    .event-card p { margin: .55rem 0; color: var(--muted); }
-    .map-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.1rem; }
-    .map-link { min-height: 44px; display: inline-flex; align-items: center; padding: .6rem .9rem; border: 1px solid var(--leaf); color: var(--leaf); font-size: .88rem; font-weight: 700; text-decoration: none; }
-    .map-link:hover { background: var(--leaf); color: white; }
-
-    .rsvp-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.2rem; align-items: start; }
-    .rsvp-copy { background: #f1e8d6; }
-    .rsvp-copy h2 { margin: .4rem 0 .8rem; color: var(--maroon); font-size: clamp(2.1rem, 5vw, 3rem); }
-    .rsvp-copy p { margin: .6rem 0; color: var(--muted); }
-    .field { margin-bottom: 1rem; }
-    .field label { display: block; margin-bottom: .35rem; color: var(--ink); font-weight: 700; }
+    .event-card { border-top: 5px solid var(--gold); }.event-card h3 { margin: .45rem 0; color: var(--maroon); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.15; }
+    .event-date { margin: .5rem 0 .8rem; color: var(--maroon); font-weight: 700; }.event-card p { margin: .55rem 0; color: var(--muted); }
+    .map-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.1rem; }.map-link { min-height: 44px; display: inline-flex; align-items: center; padding: .6rem .9rem; border: 1px solid var(--leaf); color: var(--leaf); font-size: .88rem; font-weight: 700; text-decoration: none; }.map-link:hover { background: var(--leaf); color: white; }
+    .rsvp-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 1.2rem; align-items: start; }.rsvp-copy { background: #f2e9d4; border-top: 5px solid var(--leaf); }
+    .rsvp-copy h2 { margin: .4rem 0 .8rem; color: var(--maroon); font-size: clamp(2.1rem, 5vw, 3rem); }.rsvp-copy p { margin: .6rem 0; color: var(--muted); }
+    .field { margin-bottom: 1rem; }.field label { display: block; margin-bottom: .35rem; color: var(--ink); font-weight: 700; }
     .field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: .72rem .8rem; border: 1px solid #d5c7aa; border-radius: 2px; background: #fffefa; color: var(--ink); }
-    .field textarea { min-height: 100px; resize: vertical; }
-    .field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid rgba(64,91,61,.2); border-color: var(--leaf); }
-    .rsvp-form .button { width: 100%; cursor: pointer; }
-    .form-note { margin: .8rem 0 0; color: var(--muted); font-size: .82rem; }
+    .field textarea { min-height: 100px; resize: vertical; }.field input:focus, .field select:focus, .field textarea:focus { outline: 3px solid rgba(36,75,54,.2); border-color: var(--leaf); }
+    .rsvp-form .button { width: 100%; cursor: pointer; }.form-note { margin: .8rem 0 0; color: var(--muted); font-size: .82rem; }
     .confirmation { display: none; margin-top: 1rem; padding: 1rem; background: #edf2e8; border: 1px solid #cbd9c3; white-space: pre-line; overflow-wrap: anywhere; }
-
-    footer { padding: 2.2rem 1rem calc(2.2rem + env(safe-area-inset-bottom)); text-align: center; color: #fff9eb; background: var(--maroon-dark); border-top: 5px double var(--gold); }
-    .footer-names { font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); }
-    footer p { margin: .3rem 0; color: #e8d8b8; font-size: .9rem; }
+    footer { padding: 2.2rem 1rem calc(2.2rem + env(safe-area-inset-bottom)); text-align: center; color: #fff9eb; background: var(--maroon); border-top: 7px double var(--gold); }
+    .footer-names { font-family: 'Gelasio', Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); }footer p { margin: .3rem 0; color: var(--kasavu); font-size: .9rem; }
 
     @media (max-width: 700px) {
       .container { width: min(100% - 1.25rem, 560px); }
-      .hero { min-height: 92svh; min-height: 92vh; padding: 2rem 1rem; }
-      .hero-card { width: calc(100% - 1rem); padding: 2rem 1rem; outline-offset: 4px; }
-      .names { font-size: clamp(2.7rem, 13vw, 4.5rem); }
-      .hero-date { font-size: .76rem; letter-spacing: .08em; }
-      .hero-copy { font-size: .95rem; }
-      .nav-inner { justify-content: flex-start; gap: 1.15rem; padding-inline: .8rem; }
-      .nav-inner a { font-size: .7rem; }
-      .section { padding-block: 3.25rem; }
-      .section-heading { margin-bottom: 1.45rem; }
-      .timer { gap: .45rem; }
-      .time-box { padding: .85rem .25rem; }
-      .time-box span { font-size: .62rem; letter-spacing: .08em; }
-      .welcome, .events, .rsvp-layout { grid-template-columns: 1fr; }
-      .welcome-art { min-height: 220px; }
-      .welcome-art::before { width: 125px; font-size: 4rem; }
-      .welcome-art::after { bottom: .8rem; font-size: 1rem; }
-      .event-card, .welcome-copy, .rsvp-copy, .rsvp-form { padding: 1.25rem; }
-      .map-links { display: grid; grid-template-columns: 1fr; }
-      .map-link { justify-content: center; }
-      .button { width: 100%; }
-      .actions { display: grid; grid-template-columns: 1fr; }
+      .hero { min-height: 92vh; min-height: 92svh; padding: 2rem .75rem; }
+      .invitation { width: calc(100% - 1.1rem); padding: 1.8rem .95rem; outline-offset: 4px; }
+      .names { font-size: clamp(2.65rem, 12vw, 4.3rem); }.hero-date { font-size: .75rem; letter-spacing: .07em; }.hero-copy { font-size: .95rem; }
+      .nav-inner { justify-content: flex-start; gap: 1.15rem; padding-inline: .8rem; }.nav-inner a { font-size: .69rem; }
+      .section { padding-block: 3.2rem; }.section-heading { margin-bottom: 1.45rem; }
+      .timer { gap: .4rem; }.time-box { padding: .8rem .2rem; }.time-box span { font-size: .6rem; letter-spacing: .07em; }
+      .welcome, .events, .rsvp-layout { grid-template-columns: 1fr; }.pookalam-panel { min-height: 245px; }
+      .event-card, .welcome-copy, .rsvp-copy, .rsvp-form { padding: 1.2rem; }
+      .map-links { display: grid; grid-template-columns: 1fr; }.map-link { justify-content: center; }
+      .actions { display: grid; grid-template-columns: 1fr; }.button { width: 100%; }
     }
-    @media (max-width: 360px) {
-      .container { width: calc(100% - 1rem); }
-      .timer { gap: .3rem; }
-      .time-box { padding-inline: .1rem; }
-      .time-box strong { font-size: 1.8rem; }
-      .time-box span { font-size: .56rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
-    }
+    @media (max-width: 360px) { .container { width: calc(100% - 1rem); }.timer { gap: .25rem; }.time-box { padding-inline: .1rem; }.time-box strong { font-size: 1.75rem; }.time-box span { font-size: .54rem; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
   <header class="hero" id="home">
-    <div class="hero-card">
-      <div class="lamp-mark" aria-hidden="true">✦</div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="invitation">
+      <svg class="lamp" viewBox="0 0 80 100" role="img" aria-label="Traditional Kerala nilavilakku lamp" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M40 6c-7 9 2 11 0 18-6-4-10-1-8 5 1 4 5 6 8 7 4-2 8-5 8-9 0-5-5-7-8-4 3-7 4-12 0-17Z" fill="#d5a242" stroke="#9b6e2d"/>
+          <path d="M40 36v49M30 43h20M34 52h12M31 61h18M27 72h26M22 84h36M18 90h44"/>
+          <path d="M22 85c0-9 8-13 18-13s18 4 18 13M28 66c0-7 5-11 12-11s12 4 12 11"/>
+          <path d="M17 89c6 4 13 6 23 6s17-2 23-6"/>
+        </g>
+      </svg>
       <div class="eyebrow">With the blessings of our families</div>
       <h1 class="names">Amarjith PN <span class="amp">and</span> Vishnupriya Kumar</h1>
       <div class="hero-date">Wednesday · 3 February 2027 · Guruvayur</div>
-      <div class="divider" aria-hidden="true">❋</div>
+      <div class="floral-rule" aria-hidden="true">❋</div>
       <p class="hero-copy">Together with our families, we warmly invite you to celebrate our wedding and the beginning of our life together.</p>
-      <div class="actions">
-        <a class="button" href="#celebrations">Wedding details</a>
-        <a class="button outline" href="#rsvp">Kindly RSVP</a>
-      </div>
+      <div class="actions"><a class="button" href="#celebrations">Wedding details</a><a class="button outline" href="#rsvp">Kindly RSVP</a></div>
     </div>
   </header>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <div class="nav-inner container">
-      <a href="#home">Welcome</a><a href="#countdown">Countdown</a><a href="#welcome">A celebration</a><a href="#celebrations">Events</a><a href="#rsvp">RSVP</a>
-    </div>
-  </nav>
+  <nav class="site-nav" aria-label="Main navigation"><div class="nav-inner container"><a href="#home">Welcome</a><a href="#countdown">Countdown</a><a href="#welcome">A celebration</a><a href="#celebrations">Events</a><a href="#rsvp">RSVP</a></div></nav>
 
   <main>
     <section class="countdown-section" id="countdown">
       <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">The auspicious day approaches</div>
-          <h2>Counting down to our wedding</h2>
-          <p>3 February 2027 · 9:00 AM Indian Standard Time</p>
-        </div>
-        <div class="timer" aria-label="Countdown to the wedding" aria-live="polite">
-          <div class="time-box"><strong id="days">—</strong><span>Days</span></div>
-          <div class="time-box"><strong id="hours">—</strong><span>Hours</span></div>
-          <div class="time-box"><strong id="minutes">—</strong><span>Minutes</span></div>
-          <div class="time-box"><strong id="seconds">—</strong><span>Seconds</span></div>
-        </div>
+        <div class="section-heading"><div class="eyebrow">The auspicious day approaches</div><h2>Counting down to our wedding</h2><p>3 February 2027 · 9:00 AM Indian Standard Time</p></div>
+        <div class="timer" aria-label="Countdown to the wedding" aria-live="polite"><div class="time-box"><strong id="days">—</strong><span>Days</span></div><div class="time-box"><strong id="hours">—</strong><span>Hours</span></div><div class="time-box"><strong id="minutes">—</strong><span>Minutes</span></div><div class="time-box"><strong id="seconds">—</strong><span>Seconds</span></div></div>
       </div>
     </section>
 
     <section class="section" id="welcome">
       <div class="container">
-        <div class="section-heading"><div class="eyebrow">A traditional celebration</div><h2>With joy in our hearts</h2></div>
+        <div class="section-heading"><div class="eyebrow">A Kerala celebration</div><h2>With joy in our hearts</h2></div>
         <div class="welcome">
-          <div class="welcome-art" role="img" aria-label="Traditional Kerala-inspired wedding motif"></div>
-          <div class="welcome-copy">
-            <h2>Namaskaram</h2>
-            <p>As we begin this beautiful new chapter, we would be honoured to have you with us. Your presence and blessings will make our wedding celebrations truly special.</p>
-            <p>We look forward to celebrating with you in Guruvayur, surrounded by the warmth of family, friends, and cherished traditions.</p>
-            <p><strong>സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</strong><br>With love, Amarjith &amp; Vishnupriya</p>
-          </div>
+          <div class="pookalam-panel" role="img" aria-label="Colorful Onam-style pookalam flower design"><div class="pookalam"><div class="pookalam-inner">✿</div></div><div class="pookalam-caption">A flower of welcome</div></div>
+          <div class="welcome-copy"><h2>Namaskaram</h2><p>As we begin this beautiful new chapter, we would be honoured to have you with us. Your presence and blessings will make our wedding celebrations truly special.</p><p>We look forward to celebrating with you in Guruvayur, surrounded by the warmth of family, friends, and cherished traditions.</p><p><strong>സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</strong><br>With love, Amarjith &amp; Vishnupriya</p></div>
         </div>
       </div>
     </section>
@@ -207,49 +157,17 @@
       <div class="container">
         <div class="section-heading"><div class="eyebrow">Please join us</div><h2>Celebration details</h2><p>We look forward to sharing these auspicious moments with you.</p></div>
         <div class="events">
-          <article class="event-card">
-            <div class="eyebrow">The wedding</div>
-            <h3>A sacred beginning</h3>
-            <div class="event-date">Wednesday, 3 February 2027<br>9:00 AM–2:00 PM</div>
-            <p><strong>Ceremony:</strong> Guruvayur Temple</p>
-            <p><strong>Wedding venue:</strong> Kurumboor Mana, Guruvayur</p>
-            <div class="map-links">
-              <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Guruvayur+Temple%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Temple map ↗</a>
-              <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Wedding venue map ↗</a>
-            </div>
-          </article>
-          <article class="event-card">
-            <div class="eyebrow">The reception</div>
-            <h3>An evening of celebration</h3>
-            <div class="event-date">Thursday, 4 February 2027<br>4:00 PM–8:00 PM</div>
-            <p>Join us for an evening of warm wishes, good company, and joyful memories.</p>
-            <p><strong>Venue:</strong> Cloud 7, Thadukkassery</p>
-            <div class="map-links">
-              <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cloud+7%2C+Thadukkassery" target="_blank" rel="noopener noreferrer">Reception map ↗</a>
-            </div>
-          </article>
+          <article class="event-card"><div class="eyebrow">The wedding</div><h3>A sacred beginning</h3><div class="event-date">Wednesday, 3 February 2027<br>9:00 AM–2:00 PM</div><p><strong>Ceremony:</strong> Guruvayur Temple</p><p><strong>Wedding venue:</strong> Kurumboor Mana, Guruvayur</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Guruvayur+Temple%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Temple map ↗</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Wedding venue map ↗</a></div></article>
+          <article class="event-card"><div class="eyebrow">The reception</div><h3>An evening of celebration</h3><div class="event-date">Thursday, 4 February 2027<br>4:00 PM–8:00 PM</div><p>Join us for an evening of warm wishes, good company, and joyful memories.</p><p><strong>Venue:</strong> Cloud 7, Thadukkassery</p><div class="map-links"><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cloud+7%2C+Thadukkassery" target="_blank" rel="noopener noreferrer">Reception map ↗</a></div></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="rsvp">
-      <div class="container">
-        <div class="section-heading"><div class="eyebrow">Kindly reply</div><h2>Will you join us?</h2></div>
+      <div class="container"><div class="section-heading"><div class="eyebrow">Kindly reply</div><h2>Will you join us?</h2></div>
         <div class="rsvp-layout">
-          <div class="rsvp-copy">
-            <h2>Your blessings mean so much</h2>
-            <p>Please let us know if you can join the wedding celebrations.</p>
-            <p><strong>Wedding:</strong> 3 February 2027, 9:00 AM–2:00 PM<br><strong>Reception:</strong> 4 February 2027, 4:00 PM–8:00 PM</p>
-          </div>
-          <form class="rsvp-form" id="rsvp-form">
-            <div class="field"><label for="guest-name">Your name</label><input id="guest-name" name="name" autocomplete="name" required placeholder="Enter your name"></div>
-            <div class="field"><label for="attendance">Will you be joining us?</label><select id="attendance" name="attendance" required><option value="" disabled selected>Please choose</option><option value="Joyfully accepts">Joyfully accepts</option><option value="Regretfully declines">Regretfully declines</option></select></div>
-            <div class="field"><label for="guests">Number of guests (including you)</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
-            <div class="field"><label for="message">A note for the couple (optional)</label><textarea id="message" name="message" placeholder="Write a message"></textarea></div>
-            <button class="button" type="submit">Prepare my RSVP</button>
-            <p class="form-note">This RSVP form prepares a message for you to copy and share. It does not submit responses automatically.</p>
-            <div class="confirmation" id="confirmation" role="status" aria-live="polite"></div>
-          </form>
+          <div class="rsvp-copy"><h2>Your blessings mean so much</h2><p>Please let us know if you can join the wedding celebrations.</p><p><strong>Wedding:</strong> 3 February 2027, 9:00 AM–2:00 PM<br><strong>Reception:</strong> 4 February 2027, 4:00 PM–8:00 PM</p></div>
+          <form class="rsvp-form" id="rsvp-form"><div class="field"><label for="guest-name">Your name</label><input id="guest-name" name="name" autocomplete="name" required placeholder="Enter your name"></div><div class="field"><label for="attendance">Will you be joining us?</label><select id="attendance" name="attendance" required><option value="" disabled selected>Please choose</option><option value="Joyfully accepts">Joyfully accepts</option><option value="Regretfully declines">Regretfully declines</option></select></div><div class="field"><label for="guests">Number of guests (including you)</label><select id="guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div><div class="field"><label for="message">A note for the couple (optional)</label><textarea id="message" name="message" placeholder="Write a message"></textarea></div><button class="button" type="submit">Prepare my RSVP</button><p class="form-note">This RSVP form prepares a message for you to copy and share. It does not submit responses automatically.</p><div class="confirmation" id="confirmation" role="status" aria-live="polite"></div></form>
         </div>
       </div>
     </section>
@@ -259,7 +177,7 @@
 
   <script>
     const weddingDate = new Date('2027-02-03T09:00:00+05:30').getTime();
-    const countdownTimer = window.setInterval(() => {
+    function updateCountdown() {
       const remaining = weddingDate - Date.now();
       if (remaining <= 0) {
         document.querySelector('.timer').innerHTML = '<p>Today is the day! We look forward to celebrating with you.</p>';
@@ -270,16 +188,9 @@
       document.getElementById('hours').textContent = Math.floor((remaining % 86400000) / 3600000);
       document.getElementById('minutes').textContent = Math.floor((remaining % 3600000) / 60000);
       document.getElementById('seconds').textContent = Math.floor((remaining % 60000) / 1000);
-    }, 1000);
-    // Populate immediately instead of waiting for the first interval tick.
-    document.dispatchEvent(new Event('visibilitychange'));
-    const initialRemaining = weddingDate - Date.now();
-    if (initialRemaining > 0) {
-      document.getElementById('days').textContent = Math.floor(initialRemaining / 86400000);
-      document.getElementById('hours').textContent = Math.floor((initialRemaining % 86400000) / 3600000);
-      document.getElementById('minutes').textContent = Math.floor((initialRemaining % 3600000) / 60000);
-      document.getElementById('seconds').textContent = Math.floor((initialRemaining % 60000) / 1000);
     }
+    updateCountdown();
+    const countdownTimer = window.setInterval(updateCountdown, 1000);
 
     document.getElementById('rsvp-form').addEventListener('submit', (event) => {
       event.preventDefault();
