@@ -10,23 +10,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--pink:#b76e7b;--rose:#8b4d5b;--blush:#f8e9eb;--paper:#fffaf7;--gold:#c5a46d;--ink:#49353a;--line:#e8cfd1}
+    :root{--pink:#b76e7b;--rose:#8b4d5b;--blush:#f8e9eb;--paper:#fffaf7;--gold:#c5a46d;--ink:#49353a;--line:#e8cfd1;--peach:#f9d7d9}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-snap-type:y proximity}
     body{margin:0;background:radial-gradient(ellipse at top,#fff8f6 0%,#f8e9eb 58%,#efdadd 100%);color:var(--ink);font:400 16px/1.65 'DM Sans',sans-serif}
     .page{min-height:100svh;display:grid;place-items:center;padding:1.25rem;scroll-snap-align:start}
-    .card{position:relative;width:min(100%,520px);padding:clamp(2rem,7vw,3rem) clamp(1.35rem,7vw,3rem);text-align:center;background:var(--paper);border:1px solid var(--line);box-shadow:0 18px 55px rgba(111,65,75,.12)}
+    .card{position:relative;width:min(100%,540px);padding:clamp(2rem,7vw,3rem) clamp(1.4rem,7vw,3rem);text-align:center;background:linear-gradient(180deg,#fffdfd 0%,#fffaf7 100%);border:1px solid var(--line);box-shadow:0 18px 55px rgba(111,65,75,.12)}
     .card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(197,164,109,.55);pointer-events:none}
-    .sprig{display:block;width:74px;height:53px;margin:0 auto 1rem;color:var(--pink)}
-    .eyebrow{margin:0;color:var(--rose);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
-    h1{margin:.65rem 0 .25rem;color:var(--rose);font:400 clamp(2.8rem,10vw,4.2rem)/1.08 'Great Vibes',cursive}
-    .names{margin:.55rem 0;color:#66434b;font:500 clamp(1.45rem,6vw,2rem)/1.3 'Gelasio',serif}
+    .sprig{display:block;width:88px;height:58px;margin:0 auto 1rem;color:var(--pink)}
+    .eyebrow{margin:0;color:var(--rose);font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+    h1{margin:.7rem 0 .3rem;color:var(--rose);font:400 clamp(2.9rem,10vw,4.3rem)/1.05 'Great Vibes',cursive;letter-spacing:.04em}
+    .names{margin:.5rem 0;color:#66434b;font:500 clamp(1.48rem,6vw,2.15rem)/1.25 'Gelasio',serif}
     .amp{color:var(--pink);font-style:italic}
     .rule{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:1.1rem 0;color:var(--gold);font-size:.8rem}
     .rule:before,.rule:after{content:"";width:42px;height:1px;background:#dfc99e}
     .date{margin:0;color:var(--rose);font:500 1.1rem 'Gelasio',serif}
     .time{margin:.15rem 0 0;font-size:.92rem}
-    .invite-copy{max-width:360px;margin:1rem auto 0;color:#725960;font:italic 1rem/1.8 'Gelasio',serif}
+    .invite-copy{max-width:370px;margin:1rem auto 0;color:#735961;font:italic 1rem/1.8 'Gelasio',serif}
     .venue-link{display:inline-flex;align-items:center;gap:.4rem;margin:.75rem 0 0;color:var(--rose);font-weight:600;text-decoration-color:#d5aeb4;text-underline-offset:3px}
     .reception{max-width:380px;margin:1.2rem auto 0;padding-top:1rem;border-top:1px solid #efdcdd}
     .reception .eyebrow{font-size:.62rem}
@@ -35,6 +35,8 @@
     .map-link:hover{background:#f8e9eb;transform:translateY(-1px)}
     .signoff{margin:1.2rem 0 0;color:#76565d;font:italic 1rem 'Gelasio',serif}
     .page-number{margin:1rem 0 0;color:#9a7a7f;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+    .romance-badge{display:inline-block;margin-top:.75rem;padding:.32rem .7rem;border:1px solid #efc8cc;border-radius:999px;background:#fff4f5;color:var(--rose);font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    .small-heart{display:block;width:26px;height:26px;margin:0 auto .4rem;color:var(--pink)}
     @media(max-width:380px){.page{padding:.7rem}.card{padding:1.8rem 1.1rem}.reception{margin-top:1rem}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}.map-link{transition:none}}
     @media print{html{scroll-snap-type:none}.page{min-height:100vh;page-break-after:always;padding:0}.page:last-child{page-break-after:auto}.card{box-shadow:none}}
@@ -53,7 +55,8 @@
       <p class="eyebrow">and would love you to celebrate with us</p>
       <h2 class="names">Amarjith PN <span class="amp">&amp;</span><br>Vishnupriya Kumar</h2>
       <div class="rule" aria-hidden="true">♡</div>
-      <p class="invite-copy">Two hearts, one beautiful beginning! Please join us for a day filled with love, laughter, and the people who mean the most to us. Your presence will make our celebration complete.</p>
+      <p class="invite-copy">Two hearts, one beautiful beginning. We are so excited to begin this sweet new chapter together and would be honoured to celebrate our love with you.</p>
+      <span class="romance-badge">A little love story begins</span>
       <p class="date" style="margin-top:1rem">Wednesday, 3 February 2027</p>
       <p class="time">9:00 AM – 2:00 PM · Guruvayur Temple</p>
       <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer" aria-label="Open Kurumboor Mana, Guruvayur in Google Maps">⌖ Kurumboor Mana, Guruvayur</a>
@@ -69,8 +72,11 @@
         <circle cx="50" cy="7" r="2.5" fill="#c5a46d"/>
       </svg>
       <p class="eyebrow">The celebration continues</p>
-      <h1 style="font-size:clamp(2.5rem,9vw,3.8rem)">Save us a dance</h1>
-      <p class="invite-copy">We’d be so happy to celebrate with you again over an evening of good food, warm hugs, and happy memories. Come as you are and bring your biggest smile!</p>
+      <h1 style="font-size:clamp(2.6rem,9vw,3.9rem)">Save us a dance</h1>
+      <svg class="small-heart" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 20.5C11.7 20.5 11.4 20.4 11.1 20.1C6.4 16.1 3.5 13.4 3.5 9.5C3.5 7.6 4.9 6 6.8 6C8.2 6 9.3 6.7 10 7.7C10.7 6.7 11.8 6 13.2 6C15.1 6 16.5 7.6 16.5 9.5C16.5 13.4 13.6 16.1 12 20.5Z" fill="currentColor"/>
+      </svg>
+      <p class="invite-copy">We’d be so happy to celebrate with you again over an evening of good food, warm hugs, and happy memories. Come as you are and bring your sweetest smile!</p>
       <div class="rule" aria-hidden="true">♡</div>
       <div class="reception" style="border-top:0;padding-top:0;margin-top:.5rem">
         <p class="eyebrow">Wedding reception</p>
