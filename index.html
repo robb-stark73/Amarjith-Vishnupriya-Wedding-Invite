@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f8e9eb">
-  <meta name="description" content="A little wedding invitation for Amarjith PN and Vishnupriya Kumar. Join us in Guruvayur on February 3, 2027.">
+  <meta name="description" content="A sweet wedding invitation for Amarjith PN and Vishnupriya Kumar. Celebrate with us in Guruvayur on February 3 and 4, 2027.">
   <title>Amarjith &amp; Vishnupriya | Wedding Invitation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gelasio:ital,wght@0,400;0,500;0,600;1,500&family=Great+Vibes&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--pink:#b76e7b;--rose:#8b4d5b;--blush:#f8e9eb;--paper:#fffaf7;--gold:#c5a46d;--ink:#49353a}
+    :root{--pink:#b76e7b;--rose:#8b4d5b;--blush:#f8e9eb;--paper:#fffaf7;--gold:#c5a46d;--ink:#49353a;--line:#e8cfd1}
     *{box-sizing:border-box}
-    body{min-height:100svh;margin:0;padding:1.25rem;display:grid;place-items:center;background:radial-gradient(ellipse at top,#fff8f6 0%,#f8e9eb 58%,#efdadd 100%);color:var(--ink);font:400 16px/1.65 'DM Sans',sans-serif}
-    .invite{position:relative;width:min(100%,510px);padding:clamp(2rem,7vw,3.2rem) clamp(1.35rem,7vw,3rem);text-align:center;background:var(--paper);border:1px solid #e8cfd1;box-shadow:0 18px 55px rgba(111,65,75,.12)}
-    .invite:before{content:"";position:absolute;inset:8px;border:1px solid rgba(197,164,109,.55);pointer-events:none}
+    html{scroll-behavior:smooth;scroll-snap-type:y proximity}
+    body{margin:0;background:radial-gradient(ellipse at top,#fff8f6 0%,#f8e9eb 58%,#efdadd 100%);color:var(--ink);font:400 16px/1.65 'DM Sans',sans-serif}
+    .page{min-height:100svh;display:grid;place-items:center;padding:1.25rem;scroll-snap-align:start}
+    .card{position:relative;width:min(100%,520px);padding:clamp(2rem,7vw,3rem) clamp(1.35rem,7vw,3rem);text-align:center;background:var(--paper);border:1px solid var(--line);box-shadow:0 18px 55px rgba(111,65,75,.12)}
+    .card:before{content:"";position:absolute;inset:8px;border:1px solid rgba(197,164,109,.55);pointer-events:none}
     .sprig{display:block;width:74px;height:53px;margin:0 auto 1rem;color:var(--pink)}
     .eyebrow{margin:0;color:var(--rose);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
     h1{margin:.65rem 0 .25rem;color:var(--rose);font:400 clamp(2.8rem,10vw,4.2rem)/1.08 'Great Vibes',cursive}
@@ -24,37 +26,69 @@
     .rule:before,.rule:after{content:"";width:42px;height:1px;background:#dfc99e}
     .date{margin:0;color:var(--rose);font:500 1.1rem 'Gelasio',serif}
     .time{margin:.15rem 0 0;font-size:.92rem}
-    .venue{display:inline-block;margin:.75rem 0 0;color:var(--rose);font-weight:600;text-decoration-color:#d5aeb4;text-underline-offset:3px}
-    .reception{margin:1.2rem 0 0;padding-top:1rem;border-top:1px solid #efdcdd}
+    .invite-copy{max-width:360px;margin:1rem auto 0;color:#725960;font:italic 1rem/1.8 'Gelasio',serif}
+    .venue-link{display:inline-flex;align-items:center;gap:.4rem;margin:.75rem 0 0;color:var(--rose);font-weight:600;text-decoration-color:#d5aeb4;text-underline-offset:3px}
+    .reception{max-width:380px;margin:1.2rem auto 0;padding-top:1rem;border-top:1px solid #efdcdd}
     .reception .eyebrow{font-size:.62rem}
     .reception p{margin:.35rem 0 0;font-size:.9rem}
-    .signoff{margin:1.25rem 0 0;color:#76565d;font:italic 1rem 'Gelasio',serif}
+    .map-link{display:inline-flex;align-items:center;gap:.4rem;margin-top:.7rem;padding:.55rem .9rem;border:1px solid #dcbcc1;border-radius:999px;color:var(--rose);font-size:.85rem;font-weight:700;text-decoration:none;background:#fff5f5;transition:background .2s,transform .2s}
+    .map-link:hover{background:#f8e9eb;transform:translateY(-1px)}
+    .signoff{margin:1.2rem 0 0;color:#76565d;font:italic 1rem 'Gelasio',serif}
     .malayalam{margin:.2rem 0 0;color:var(--pink);font:600 1rem 'Noto Sans Malayalam',sans-serif}
-    @media(max-width:380px){body{padding:.7rem}.invite{padding:1.8rem 1.1rem}.reception{margin-top:1rem}}
-    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+    .page-nav{display:flex;justify-content:center;gap:.7rem;margin-top:1.25rem}
+    .page-nav a{min-width:100px;padding:.5rem .85rem;border:1px solid #e1c4c8;border-radius:999px;color:var(--rose);font-size:.8rem;font-weight:700;text-decoration:none;background:var(--paper)}
+    .page-nav a:hover{background:var(--blush)}
+    .page-number{margin:1rem 0 0;color:#9a7a7f;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+    @media(max-width:380px){.page{padding:.7rem}.card{padding:1.8rem 1.1rem}.reception{margin-top:1rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;scroll-snap-type:none}.map-link{transition:none}}
+    @media print{html{scroll-snap-type:none}.page{min-height:100vh;page-break-after:always;padding:0}.page:last-child{page-break-after:auto}.card{box-shadow:none}}
   </style>
 </head>
 <body>
-  <main class="invite" aria-label="Wedding invitation">
-    <svg class="sprig" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M50 64C49 46 48 27 50 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-      <path d="M49 48C37 47 28 40 25 31C36 31 45 37 49 48ZM50 37C62 36 70 29 73 20C62 20 54 26 50 37ZM49 26C40 24 35 18 34 12C42 13 47 18 49 26ZM51 55C60 53 67 48 69 41C60 42 54 46 51 55Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-      <circle cx="50" cy="7" r="2.5" fill="#c5a46d"/>
-    </svg>
-    <p class="eyebrow">Together with our families</p>
-    <h1>We’re getting married</h1>
-    <p class="eyebrow">and would love you to celebrate with us</p>
-    <h2 class="names">Amarjith PN <span class="amp">&amp;</span><br>Vishnupriya Kumar</h2>
-    <div class="rule" aria-hidden="true">♡</div>
-    <p class="date">Wednesday, 3 February 2027</p>
-    <p class="time">9:00 AM – 2:00 PM</p>
-    <a class="venue" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer">Kurumboor Mana, Guruvayur</a>
-    <div class="reception">
-      <p class="eyebrow">Reception · Thursday, 4 February</p>
-      <p>4:00 PM – 8:00 PM · Cloud 7, Thadukkassery</p>
-    </div>
-    <p class="signoff">With love and joy,</p>
-    <p class="malayalam" lang="ml">സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</p>
-  </main>
+  <section class="page" id="invitation" aria-label="Page 1: Wedding invitation">
+    <main class="card">
+      <svg class="sprig" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 64C49 46 48 27 50 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M49 48C37 47 28 40 25 31C36 31 45 37 49 48ZM50 37C62 36 70 29 73 20C62 20 54 26 50 37ZM49 26C40 24 35 18 34 12C42 13 47 18 49 26ZM51 55C60 53 67 48 69 41C60 42 54 46 51 55Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="50" cy="7" r="2.5" fill="#c5a46d"/>
+      </svg>
+      <p class="eyebrow">Together with our families</p>
+      <h1>We’re getting married</h1>
+      <p class="eyebrow">and would love you to celebrate with us</p>
+      <h2 class="names">Amarjith PN <span class="amp">&amp;</span><br>Vishnupriya Kumar</h2>
+      <div class="rule" aria-hidden="true">♡</div>
+      <p class="invite-copy">Two hearts, one beautiful beginning! Please join us for a day filled with love, laughter, and the people who mean the most to us. Your presence will make our celebration complete.</p>
+      <p class="date" style="margin-top:1rem">Wednesday, 3 February 2027</p>
+      <p class="time">9:00 AM – 2:00 PM · Guruvayur Temple</p>
+      <a class="venue-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kurumboor+Mana%2C+Guruvayur" target="_blank" rel="noopener noreferrer" aria-label="Open Kurumboor Mana, Guruvayur in Google Maps">⌖ Kurumboor Mana, Guruvayur</a>
+      <nav class="page-nav" aria-label="Invitation pages"><a href="#celebration-details">Next: details ↓</a></nav>
+      <p class="page-number">Page 1 of 2</p>
+    </main>
+  </section>
+
+  <section class="page" id="celebration-details" aria-label="Page 2: Reception and map">
+    <main class="card">
+      <svg class="sprig" viewBox="0 0 100 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M50 64C49 46 48 27 50 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M49 48C37 47 28 40 25 31C36 31 45 37 49 48ZM50 37C62 36 70 29 73 20C62 20 54 26 50 37ZM49 26C40 24 35 18 34 12C42 13 47 18 49 26ZM51 55C60 53 67 48 69 41C60 42 54 46 51 55Z" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="50" cy="7" r="2.5" fill="#c5a46d"/>
+      </svg>
+      <p class="eyebrow">The celebration continues</p>
+      <h1 style="font-size:clamp(2.5rem,9vw,3.8rem)">Save us a dance</h1>
+      <p class="invite-copy">We’d be so happy to celebrate with you again over an evening of good food, warm hugs, and happy memories. Come as you are and bring your biggest smile!</p>
+      <div class="rule" aria-hidden="true">♡</div>
+      <div class="reception" style="border-top:0;padding-top:0;margin-top:.5rem">
+        <p class="eyebrow">Wedding reception</p>
+        <p class="date" style="margin-top:.45rem">Thursday, 4 February 2027</p>
+        <p>4:00 PM – 8:00 PM</p>
+        <p style="font-weight:700;color:var(--rose)">Cloud 7, Thadukkassery</p>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cloud+7%2C+Thadukkassery%2C+Kerala" target="_blank" rel="noopener noreferrer" aria-label="Open Cloud 7, Thadukkassery in Google Maps">⌖ View Cloud 7 on Google Maps</a>
+      </div>
+      <p class="signoff">With love and joy,</p>
+      <p class="malayalam" lang="ml">സ്നേഹപൂർവ്വം ക്ഷണിക്കുന്നു</p>
+      <nav class="page-nav" aria-label="Invitation pages"><a href="#invitation">↑ Back to invite</a></nav>
+      <p class="page-number">Page 2 of 2</p>
+    </main>
+  </section>
 </body>
 </html>
