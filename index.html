@@ -33,7 +33,7 @@
       --sage-light: #EDF3EE;
       --text-dark: #3D3133;
       --text-muted: #786669;
-      --card-bg: rgba(255, 255, 255, 0.9);
+      --card-bg: rgba(255, 255, 255, 0.92);
       --shadow-soft: 0 16px 40px -12px rgba(198, 163, 85, 0.18), 0 4px 16px rgba(229, 152, 163, 0.12);
       --font-script: 'Great Vibes', cursive;
       --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -83,7 +83,7 @@
     }
 
     /* ==========================================================================
-       3. ANIMATED ENVELOPE OPENING OVERLAY
+       3. ANIMATED ENVELOPE OPENING OVERLAY (FIXED & MOBILE RELIABLE)
        ========================================================================== */
     #envelope-overlay {
       position: fixed;
@@ -95,7 +95,9 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
-      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.9s ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.8s ease;
     }
 
     #envelope-overlay.opened {
@@ -109,7 +111,6 @@
       width: 100%;
       max-width: 350px;
       height: 235px;
-      cursor: pointer;
       perspective: 1000px;
       transition: transform 0.35s ease;
     }
@@ -145,11 +146,11 @@
       text-align: center;
       padding: 14px;
       z-index: 2;
-      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transition: transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
     .envelope-wrapper.animating .envelope-letter {
-      transform: translateY(-72px);
+      transform: translateY(-75px);
     }
 
     .envelope-pocket {
@@ -193,8 +194,9 @@
       border-width: 132px 175px 0 175px;
       border-color: #F4D5DA transparent transparent transparent;
       transform-origin: top center;
-      transition: transform 0.65s ease;
+      transition: transform 0.6s ease;
       z-index: 4;
+      pointer-events: none;
       filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.06));
     }
 
@@ -224,7 +226,7 @@
       font-weight: 700;
       font-size: 1.15rem;
       line-height: 1;
-      transition: opacity 0.35s ease, transform 0.35s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
       animation: pulseSeal 2.2s infinite ease-in-out;
     }
 
@@ -245,24 +247,25 @@
       font-size: 0.92rem;
     }
 
-    .open-prompt button {
-      margin-top: 10px;
-      padding: 10px 24px;
+    .open-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 28px;
       background: #FFFFFF;
-      border: 1px solid rgba(198, 163, 85, 0.5);
+      border: 1px solid rgba(198, 163, 85, 0.55);
       border-radius: 999px;
       color: var(--blush-deep);
       font-family: var(--font-sans);
       font-weight: 600;
-      font-size: 0.88rem;
+      font-size: 0.92rem;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(229, 152, 163, 0.18);
+      box-shadow: 0 6px 18px rgba(229, 152, 163, 0.22);
       transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .open-prompt button:hover {
+    .open-btn:hover {
       background: var(--blush-light);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
     }
 
     /* ==========================================================================
@@ -304,10 +307,10 @@
       position: sticky;
       top: 14px;
       z-index: 100;
-      max-width: 500px;
+      max-width: 420px;
       margin: 0 auto;
-      padding: 8px 14px;
-      background: rgba(255, 253, 249, 0.88);
+      padding: 8px 16px;
+      background: rgba(255, 253, 249, 0.9);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border: 1px solid rgba(198, 163, 85, 0.35);
@@ -316,7 +319,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 4px;
+      gap: 8px;
     }
 
     .nav-logo {
@@ -328,21 +331,21 @@
       font-weight: 700;
       font-size: 1.05rem;
       color: var(--blush-deep);
-      padding: 4px 10px;
+      padding: 4px 8px;
       text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      gap: 4px;
+      gap: 6px;
     }
 
     .nav-links a {
       text-decoration: none;
       color: var(--text-muted);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 600;
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
       transition: all 0.25s ease;
     }
@@ -365,7 +368,7 @@
     }
 
     section {
-      margin-bottom: 68px;
+      margin-bottom: 64px;
     }
 
     .hero-card {
@@ -470,53 +473,19 @@
     }
 
     /* ==========================================================================
-       7. CUTE BUBU & DUDU INSPIRED BEAR ILLUSTRATION & COUNTDOWN
+       7. COUNTDOWN TIMER & RINGS ANIMATION
        ========================================================================== */
-    .bears-scene {
-      margin: 26px auto 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .bears-svg {
-      width: 210px;
-      height: 135px;
-      overflow: visible;
-    }
-
-    .bear-left {
-      animation: bearSwayLeft 3.2s ease-in-out infinite;
-      transform-origin: 70px 115px;
-    }
-
-    .bear-right {
-      animation: bearSwayRight 3.2s ease-in-out infinite;
-      transform-origin: 140px 115px;
-    }
-
     .floating-heart-beat {
       animation: heartFloatBeat 2s ease-in-out infinite;
-      transform-origin: 105px 32px;
-    }
-
-    @keyframes bearSwayLeft {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2.5deg); }
-    }
-
-    @keyframes bearSwayRight {
-      0%, 100% { transform: rotate(2deg); }
-      50% { transform: rotate(-2.5deg); }
     }
 
     @keyframes heartFloatBeat {
       0%, 100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-5px) scale(1.14); }
+      50% { transform: translateY(-4px) scale(1.12); }
     }
 
     .countdown-box {
-      margin-top: 24px;
+      margin-top: 28px;
       padding-top: 24px;
       border-top: 1px dashed rgba(198, 163, 85, 0.4);
     }
@@ -704,90 +673,7 @@
     }
 
     /* ==========================================================================
-       9. OUR LITTLE STORY (EDITABLE TIMELINE)
-       ========================================================================== */
-    .story-card {
-      background: var(--card-bg);
-      border: 1px solid rgba(198, 163, 85, 0.32);
-      border-radius: 30px;
-      padding: 34px 22px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .story-note {
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 580px;
-      margin: 0 auto;
-      padding-left: 28px;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 9px;
-      top: 6px;
-      bottom: 6px;
-      width: 2px;
-      background: linear-gradient(180deg, var(--blush-primary), var(--champagne-gold), var(--sage-green));
-      border-radius: 2px;
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 26px;
-      background: #FFFFFF;
-      border: 1px solid rgba(229, 152, 163, 0.28);
-      border-radius: 18px;
-      padding: 18px 20px;
-      box-shadow: 0 6px 18px rgba(61, 49, 51, 0.04);
-    }
-
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: -26px;
-      top: 20px;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--blush-deep);
-      border: 3px solid #FFFDF9;
-      box-shadow: 0 0 0 2px var(--champagne-gold);
-    }
-
-    .timeline-date {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--champagne-gold);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-
-    .timeline-item h4 {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      color: var(--text-dark);
-      margin-bottom: 6px;
-    }
-
-    .timeline-item p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    /* ==========================================================================
-       10. FINAL INVITATION FOOTER
+       9. FINAL INVITATION FOOTER
        ========================================================================== */
     .closing-card {
       text-align: center;
@@ -814,7 +700,7 @@
     }
 
     /* ==========================================================================
-       11. SCROLL REVEAL ANIMATION
+       10. SCROLL REVEAL ANIMATION
        ========================================================================== */
     .reveal {
       opacity: 0;
@@ -834,7 +720,7 @@
        ANIMATED ENVELOPE OPENING OVERLAY
        ======================================================================== -->
   <div id="envelope-overlay" role="dialog" aria-label="Wedding Invitation Envelope">
-    <div class="envelope-wrapper" id="envelope" onclick="openInvitation()">
+    <div class="envelope-wrapper" id="envelope">
       <div class="envelope-body">
         <div class="envelope-letter">
           <div style="font-family: var(--font-serif); font-style: italic; font-weight: 700; color: var(--champagne-gold); font-size: 1.15rem; margin-bottom: 2px;">A ♥ V</div>
@@ -852,7 +738,7 @@
     </div>
     <div class="open-prompt">
       <p>You have received a special wedding invitation</p>
-      <button type="button" onclick="openInvitation()">Tap to Open Invitation ✨</button>
+      <button type="button" class="open-btn" id="open-invite-btn">Tap to Open Invitation ✨</button>
     </div>
   </div>
 
@@ -862,16 +748,16 @@
   <!-- Sticky Navigation Bar -->
   <nav class="nav-bar" aria-label="Invitation Navigation">
     <a href="#home" class="nav-logo">
-      <svg width="24" height="24" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <circle cx="30" cy="30" r="28" fill="#FFFDF9" stroke="#C6A355" stroke-width="2.5" />
-        <text x="30" y="37" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="700" font-size="22" fill="#C97380">A&amp;V</text>
+        <circle cx="30" cy="30" r="24" stroke="#E598A3" stroke-width="1" stroke-dasharray="2 2" />
+        <text x="30" y="37" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="700" font-size="21" fill="#C97380">A&amp;V</text>
       </svg>
       <span>A &amp; V</span>
     </a>
     <div class="nav-links">
       <a href="#home" class="active">Invite</a>
       <a href="#events">Events</a>
-      <a href="#story">Our Story</a>
     </div>
   </nav>
 
@@ -883,7 +769,6 @@
       <!-- Cute Custom A & V Floral Wreath & Heart Monogram Logo -->
       <div class="av-monogram" aria-label="Amarjith and Vishnupriya Monogram Logo">
         <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Soft Blush Aura -->
           <circle cx="70" cy="70" r="62" fill="#FFFDF9" stroke="#C6A355" stroke-width="1.8" />
           <circle cx="70" cy="70" r="55" stroke="#E598A3" stroke-width="1.1" stroke-dasharray="3 3" />
 
@@ -897,7 +782,6 @@
           <ellipse cx="46" cy="112" rx="5" ry="2.5" transform="rotate(20 46 112)" fill="#8FA691" />
           <ellipse cx="108" cy="100" rx="5" ry="2.5" transform="rotate(-35 108 100)" fill="#8FA691" />
           <ellipse cx="94" cy="112" rx="5" ry="2.5" transform="rotate(-20 94 112)" fill="#8FA691" />
-          <!-- Tiny Gold Berry Dot at Bottom Center -->
           <circle cx="70" cy="120" r="3" fill="#C6A355" />
 
           <!-- Interlocking Cursive A & V Letters -->
@@ -938,50 +822,6 @@
         </div>
       </div>
 
-      <!-- Cute Bubu & Dudu Inspired Bear Couple Illustration -->
-      <div class="bears-scene" aria-hidden="true">
-        <svg class="bears-svg" viewBox="0 0 210 135" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Floating Heart Above Bears -->
-          <path class="floating-heart-beat" d="M105 42 C105 42 91 31 91 22 C91 16.5 95.5 13 100 13 C103 13 104.5 15 105 17 C105.5 15 107 13 110 13 C114.5 13 119 16.5 119 22 C119 31 105 42 105 42 Z" fill="#E598A3" />
-
-          <!-- Left Bear (Cream/White Bear - Bubu Style) -->
-          <g class="bear-left">
-            <circle cx="52" cy="52" r="10" fill="#FFFDF9" stroke="#5C494C" stroke-width="2.2" />
-            <circle cx="84" cy="52" r="10" fill="#FFFDF9" stroke="#5C494C" stroke-width="2.2" />
-            <circle cx="52" cy="52" r="5" fill="#F7C6CE" />
-            <circle cx="84" cy="52" r="5" fill="#F7C6CE" />
-            <ellipse cx="68" cy="103" rx="22" ry="20" fill="#FFFDF9" stroke="#5C494C" stroke-width="2.2" />
-            <ellipse cx="68" cy="70" rx="25" ry="21" fill="#FFFDF9" stroke="#5C494C" stroke-width="2.2" />
-            <circle cx="59" cy="69" r="2.4" fill="#3D3133" />
-            <circle cx="77" cy="69" r="2.4" fill="#3D3133" />
-            <ellipse cx="54" cy="74" rx="4.5" ry="2.5" fill="#F7B2BD" opacity="0.8" />
-            <ellipse cx="82" cy="74" rx="4.5" ry="2.5" fill="#F7B2BD" opacity="0.8" />
-            <path d="M65 73 Q68 77 71 73" stroke="#3D3133" stroke-width="2" stroke-linecap="round" />
-            <path d="M86 98 Q98 96 105 100" stroke="#5C494C" stroke-width="2.2" stroke-linecap="round" />
-          </g>
-
-          <!-- Right Bear (Warm Brown Bear - Dudu Style) -->
-          <g class="bear-right">
-            <circle cx="126" cy="52" r="10" fill="#B68B6D" stroke="#5C494C" stroke-width="2.2" />
-            <circle cx="158" cy="52" r="10" fill="#B68B6D" stroke="#5C494C" stroke-width="2.2" />
-            <circle cx="126" cy="52" r="5" fill="#DFB89E" />
-            <circle cx="158" cy="52" r="5" fill="#DFB89E" />
-            <ellipse cx="142" cy="103" rx="22" ry="20" fill="#B68B6D" stroke="#5C494C" stroke-width="2.2" />
-            <ellipse cx="142" cy="70" rx="25" ry="21" fill="#B68B6D" stroke="#5C494C" stroke-width="2.2" />
-            <ellipse cx="142" cy="74" rx="8" ry="6" fill="#F5E6DA" />
-            <circle cx="133" cy="69" r="2.4" fill="#3D3133" />
-            <circle cx="151" cy="69" r="2.4" fill="#3D3133" />
-            <ellipse cx="128" cy="74" rx="4.5" ry="2.5" fill="#E598A3" opacity="0.75" />
-            <ellipse cx="156" cy="74" rx="4.5" ry="2.5" fill="#E598A3" opacity="0.75" />
-            <path d="M139 74 Q142 78 145 74" stroke="#3D3133" stroke-width="2" stroke-linecap="round" />
-            <path d="M124 98 Q112 96 105 100" stroke="#5C494C" stroke-width="2.2" stroke-linecap="round" />
-          </g>
-
-          <!-- Little Heart Where Hands Meet -->
-          <path d="M105 105 C105 105 99 100 99 96.5 C99 94.5 100.8 93 102.8 93 C104 93 104.8 93.8 105 94.6 C105.2 93.8 106 93 107.2 93 C109.2 93 111 94.5 111 96.5 C111 100 105 105 105 105 Z" fill="#C97380" />
-        </svg>
-      </div>
-
       <!-- Countdown Timer to February 3 -->
       <div class="countdown-box">
         <div class="countdown-label" id="countdown-status">Counting down to February 3</div>
@@ -1010,4 +850,240 @@
          WEDDING EVENTS SECTION
          ====================================================================== -->
     <section id="events" class="reveal">
-      <div class
+      <div class="section-header">
+        <span class="section-tag">Save The Dates</span>
+        <h2 class="section-title">Wedding Celebrations</h2>
+      </div>
+
+      <div class="events-grid">
+        <!-- EVENT CARD 1: THE WEDDING -->
+        <article class="event-card">
+          <div>
+            <span class="event-badge">💍 Muhurtham &amp; Ceremony</span>
+            <h3>The Wedding</h3>
+            <p class="event-date">February 3</p>
+
+            <div class="venue-block">
+              <div class="venue-role">Main Wedding Ceremony</div>
+              <div class="venue-name">Guruvayur Temple, Guruvayur</div>
+              <a
+                class="map-btn"
+                href="https://www.google.com/maps/search/?api=1&query=Guruvayur+Temple+Guruvayur"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📍 View Location
+              </a>
+            </div>
+
+            <div class="venue-block" style="margin-bottom: 0;">
+              <div class="venue-role">Wedding Function Venue</div>
+              <div class="venue-name">Kurumboor Mana, Guruvayur</div>
+              <a
+                class="map-btn secondary"
+                href="https://www.google.com/maps/search/?api=1&query=Kurumboor+Mana+Guruvayur"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                📍 View Location
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- EVENT CARD 2: WEDDING RECEPTION -->
+        <article class="event-card">
+          <div>
+            <span class="event-badge">🥂 Evening Celebration</span>
+            <h3>Wedding Reception</h3>
+            <p class="event-date">February 4</p>
+
+            <div class="venue-block" style="margin-bottom: 0;">
+              <div class="venue-role">Reception Venue</div>
+              <div class="venue-name">Cloud 7, Thadukkassery, Kongad</div>
+              <p class="venue-time">🕒 4:00 PM – 8:00 PM</p>
+              <a
+                class="map-btn"
+                href="https://www.google.com/maps/search/?api=1&query=Cloud+7+Thadukkassery+Kongad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                🧭 Get Directions
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-top: 22px; padding-top: 16px; border-top: 1px dashed rgba(198, 163, 85, 0.35); color: var(--text-muted); font-size: 0.9rem;">
+            Join us for an evening of joy, blessings, and togetherness as we begin our new chapter.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FINAL INVITATION CLOSING
+         ====================================================================== -->
+    <footer class="closing-card reveal">
+      <div class="av-monogram" aria-hidden="true">
+        <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 88px; height: 88px;">
+          <circle cx="70" cy="70" r="62" fill="#FFFDF9" stroke="#C6A355" stroke-width="1.8" />
+          <circle cx="70" cy="70" r="55" stroke="#E598A3" stroke-width="1.1" stroke-dasharray="3 3" />
+          <path d="M70 25 C70 25 62 19 62 14.5 C62 11.8 64.2 10 66.8 10 C68.3 10 69.5 10.9 70 12 C70.5 10.9 71.7 10 73.2 10 C75.8 10 78 11.8 78 14.5 C78 19 70 25 70 25 Z" fill="#E598A3" />
+          <text x="51" y="83" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="700" font-size="46" fill="#C97380">A</text>
+          <text x="70" y="76" text-anchor="middle" font-family="'Great Vibes', cursive" font-size="24" fill="#C6A355">&amp;</text>
+          <text x="89" y="85" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-style="italic" font-weight="700" font-size="46" fill="#C97380">V</text>
+        </svg>
+      </div>
+
+      <p class="closing-message">
+        Your presence will make our celebration even more special.
+      </p>
+      <div class="closing-signoff">
+        With love, Amarjith &amp; Vishnupriya
+      </div>
+
+      <!-- Cute Interlocking Wedding Rings & Heart Illustration at Bottom -->
+      <div style="display: flex; justify-content: center;">
+        <svg width="110" height="72" viewBox="0 0 110 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="floating-heart-beat" style="transform-origin: 55px 22px;" d="M55 34 C55 34 39 22 39 13 C39 8 43.5 4.5 48 4.5 C51.2 4.5 53.6 6.5 55 8.8 C56.4 6.5 58.8 4.5 62 4.5 C66.5 4.5 71 8 71 13 C71 22 55 34 55 34 Z" fill="#E598A3" />
+          <circle cx="46" cy="52" r="14" stroke="#C6A355" stroke-width="3" />
+          <circle cx="64" cy="52" r="14" stroke="#E598A3" stroke-width="3" />
+          <polygon points="46,34 42,38 50,38" fill="#C6A355" />
+        </svg>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    /* ========================================================================
+       1. ENVELOPE OPENING ANIMATION (WORKS ON ALL TOUCH & DESKTOP BROWSERS)
+       ======================================================================== */
+    document.addEventListener('DOMContentLoaded', function () {
+      const overlay = document.getElementById('envelope-overlay');
+      const envelope = document.getElementById('envelope');
+      const openBtn = document.getElementById('open-invite-btn');
+      let isOpening = false;
+
+      function triggerOpen(e) {
+        if (e) e.preventDefault();
+        if (isOpening) return;
+        isOpening = true;
+
+        envelope.classList.add('animating');
+
+        setTimeout(function () {
+          overlay.classList.add('opened');
+          document.body.classList.remove('envelope-locked');
+          // Ensure overlay is completely removed from layout after fade
+          setTimeout(function () {
+            overlay.style.display = 'none';
+          }, 850);
+        }, 650);
+      }
+
+      if (overlay) overlay.addEventListener('click', triggerOpen);
+      if (envelope) envelope.addEventListener('click', triggerOpen);
+      if (openBtn) openBtn.addEventListener('click', triggerOpen);
+    });
+
+    /* ========================================================================
+       2. FLOATING HEARTS, PETALS & BUTTERFLIES GENERATOR
+       ======================================================================== */
+    (function createFloatingParticles() {
+      const container = document.getElementById('floating-particles');
+      if (!container) return;
+      const shapes = ['🌸', '💗', '🦋', '✨', '🌷'];
+      const count = 16;
+
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('span');
+        el.className = 'particle';
+        el.textContent = shapes[i % shapes.length];
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.fontSize = (14 + Math.random() * 10) + 'px';
+        el.style.animationDuration = (12 + Math.random() * 12) + 's';
+        el.style.animationDelay = (-Math.random() * 18) + 's';
+        container.appendChild(el);
+      }
+    })();
+
+    /* ========================================================================
+       3. AUTOMATIC COUNTDOWN TO UPCOMING FEBRUARY 3
+       ======================================================================== */
+    (function initCountdown() {
+      const now = new Date();
+      let targetYear = now.getFullYear();
+      let targetDate = new Date(targetYear, 1, 3, 0, 0, 0);
+
+      if (now > new Date(targetYear, 1, 4, 23, 59, 59)) {
+        targetYear += 1;
+        targetDate = new Date(targetYear, 1, 3, 0, 0, 0);
+      }
+
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minsEl = document.getElementById('minutes');
+      const secsEl = document.getElementById('seconds');
+      const statusEl = document.getElementById('countdown-status');
+
+      function updateTimer() {
+        const current = new Date();
+        const diff = targetDate - current;
+
+        if (diff <= 0) {
+          statusEl.textContent = 'The Celebration is Here! ♥';
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minsEl.textContent = '00';
+          secsEl.textContent = '00';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / 1000 / 60) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+
+        daysEl.textContent = String(d).padStart(2, '0');
+        hoursEl.textContent = String(h).padStart(2, '0');
+        minsEl.textContent = String(m).padStart(2, '0');
+        secsEl.textContent = String(s).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    })();
+
+    /* ========================================================================
+       4. SCROLL REVEAL & ACTIVE NAV HIGHLIGHTING
+       ======================================================================== */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    revealEls.forEach((el) => observer.observe(el));
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach((sec) => {
+        if (window.scrollY >= sec.offsetTop - 160) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
